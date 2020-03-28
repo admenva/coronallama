@@ -12,98 +12,119 @@ class VolunteerHomeModel @Inject constructor() : VolunteerHomeContract.Model {
     init {
         items.add(
             Request(
-                "1000 masks",
+                "masks",
                 "The Royal London Hospital",
+                "description",
                 "Whitechapel Rd, Whitechapel, London E1 1FR, United Kingdom",
-                "https://www.bartshealth.nhs.uk/media/images/versions/img94joktmu717322.jpg"
+                "https://www.bartshealth.nhs.uk/media/images/versions/img94joktmu717322.jpg",
+                1000
             )
         )
         items.add(
             Request(
-                "2000 pair of gloves",
+                "pair of gloves",
                 "University College Hospital",
+                "description",
                 "235 Euston Rd, Bloomsbury, London NW1 2BU, United Kingdom",
-                "https://upload.wikimedia.org/wikipedia/commons/b/b5/University_College_Hospital_-_New_Building_-_London_-_020504.jpg"
+                "https://upload.wikimedia.org/wikipedia/commons/b/b5/University_College_Hospital_-_New_Building_-_London_-_020504.jpg",
+                2000
             )
         )
         items.add(
             Request(
-                "500 respirator valves",
+                "respirator valves",
                 "Barts Health NHS Trust",
+                "description",
                 "The Royal London Hospital, Whitechapel Rd, London E1 1BB",
-                "https://d3d00swyhr67nd.cloudfront.net/_source/COL_BAR_collection_image.jpg"
+                "https://d3d00swyhr67nd.cloudfront.net/_source/COL_BAR_collection_image.jpg", 500
             )
         )
         items.add(
             Request(
-                "250 shoe covers",
+                "shoe covers",
                 "St Thomas' Hospital",
+                "description",
                 "Westminster Bridge Rd, Bishop's, London SE1 7EH, United Kingdom",
-                "https://www.southwarknews.co.uk/wp-content/uploads/2016/09/St_Thomas_Hospital_-_SB.jpg"
+                "https://www.southwarknews.co.uk/wp-content/uploads/2016/09/St_Thomas_Hospital_-_SB.jpg",
+                250
             )
         )
         items.add(
             Request(
-                "1000 masks",
+                "masks",
                 "The Royal London Hospital",
+                "description",
                 "Whitechapel Rd, Whitechapel, London E1 1FR, United Kingdom",
-                "https://www.bartshealth.nhs.uk/media/images/versions/img94joktmu717322.jpg"
+                "https://www.bartshealth.nhs.uk/media/images/versions/img94joktmu717322.jpg",
+                1000
             )
         )
         items.add(
             Request(
-                "2000 pair of gloves",
+                "pair of gloves",
                 "University College Hospital",
+                "description",
                 "235 Euston Rd, Bloomsbury, London NW1 2BU, United Kingdom",
-                "https://upload.wikimedia.org/wikipedia/commons/b/b5/University_College_Hospital_-_New_Building_-_London_-_020504.jpg"
+                "https://upload.wikimedia.org/wikipedia/commons/b/b5/University_College_Hospital_-_New_Building_-_London_-_020504.jpg",
+                2000
             )
         )
         items.add(
             Request(
-                "500 respirator valves",
+                "respirator valves",
                 "Barts Health NHS Trust",
+                "description",
                 "The Royal London Hospital, Whitechapel Rd, London E1 1BB",
-                "https://d3d00swyhr67nd.cloudfront.net/_source/COL_BAR_collection_image.jpg"
+                "https://d3d00swyhr67nd.cloudfront.net/_source/COL_BAR_collection_image.jpg", 500
             )
         )
         items.add(
             Request(
-                "250 shoe covers",
+                "shoe covers",
                 "St Thomas' Hospital",
+                "description",
                 "Westminster Bridge Rd, Bishop's, London SE1 7EH, United Kingdom",
-                "https://www.southwarknews.co.uk/wp-content/uploads/2016/09/St_Thomas_Hospital_-_SB.jpg"
+                "https://www.southwarknews.co.uk/wp-content/uploads/2016/09/St_Thomas_Hospital_-_SB.jpg",
+                250
             )
         )
         items.add(
             Request(
-                "1000 masks",
+                "masks",
                 "The Royal London Hospital",
+                "description",
                 "Whitechapel Rd, Whitechapel, London E1 1FR, United Kingdom",
-                "https://www.bartshealth.nhs.uk/media/images/versions/img94joktmu717322.jpg"
+                "https://www.bartshealth.nhs.uk/media/images/versions/img94joktmu717322.jpg",
+                1000
             )
         )
         items.add(
             Request(
-                "2000 pair of gloves",
+                "pair of gloves",
                 "University College Hospital",
+                "description",
                 "235 Euston Rd, Bloomsbury, London NW1 2BU, United Kingdom",
-                "https://upload.wikimedia.org/wikipedia/commons/b/b5/University_College_Hospital_-_New_Building_-_London_-_020504.jpg"
+                "https://upload.wikimedia.org/wikipedia/commons/b/b5/University_College_Hospital_-_New_Building_-_London_-_020504.jpg",
+                2000
             )
         )
         items.add(
             Request(
-                "500 respirator valves",
+                "respirator valves",
                 "Barts Health NHS Trust",
+                "description",
                 "The Royal London Hospital, Whitechapel Rd, London E1 1BB",
-                "https://d3d00swyhr67nd.cloudfront.net/_source/COL_BAR_collection_image.jpg"
+                "https://d3d00swyhr67nd.cloudfront.net/_source/COL_BAR_collection_image.jpg", 500
             )
         )
         items.add(
             Request(
-                "250 shoe covers",
+                "shoe covers",
                 "St Thomas' Hospital",
+                "description",
                 "Westminster Bridge Rd, Bishop's, London SE1 7EH, United Kingdom",
-                "https://www.southwarknews.co.uk/wp-content/uploads/2016/09/St_Thomas_Hospital_-_SB.jpg"
+                "https://www.southwarknews.co.uk/wp-content/uploads/2016/09/St_Thomas_Hospital_-_SB.jpg",
+                250
             )
         )
     }
@@ -113,7 +134,7 @@ class VolunteerHomeModel @Inject constructor() : VolunteerHomeContract.Model {
     }
 
     override fun getItemAt(position: Int): Request {
-        return items.get(position)
+        return items[position]
     }
 
 }

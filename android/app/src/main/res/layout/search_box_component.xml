@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:id="@+id/search_box_component_root"
     android:layout_alignParentTop="true"
-    android:background="#FFFFFF"
+    android:background="@color/white"
     android:layout_height="wrap_content"
     android:orientation="vertical">
 
@@ -20,14 +20,14 @@
         android:clickable="true"
         android:gravity="center_vertical"
         android:orientation="horizontal"
-        android:padding="16dp"
+        android:padding="@dimen/_16"
         android:visibility="gone">
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="16dp"
-            android:layout_marginRight="16dp"
+            android:layout_marginEnd="@dimen/_16"
+            android:layout_marginRight="@dimen/_16"
             android:src="@drawable/location" />
 
         <TextView
@@ -44,8 +44,8 @@
         android:layout_height="wrap_content"
         android:gravity="center_vertical"
         android:orientation="vertical"
-        android:paddingLeft="16dp"
-        android:paddingRight="16dp"
+        android:paddingLeft="@dimen/_16"
+        android:paddingRight="@dimen/_16"
         android:visibility="gone">
 
         <TextView
@@ -53,7 +53,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:clickable="true"
-            android:paddingBottom="16dp"
+            android:paddingBottom="@dimen/_16"
             android:text="Result 1"
             android:textSize="16sp"
             android:focusable="true" />
@@ -72,7 +72,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:clickable="true"
-            android:paddingTop="16dp"
+            android:paddingTop="@dimen/_16"
             android:text="Result 3"
             android:textSize="16sp"
             android:focusable="true" />

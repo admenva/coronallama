@@ -3,4 +3,7 @@
     <string name="volunteer">Volunteer</string>
     <string name="institution">Institution</string>
     <string name="start_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis purus sapien, elementum et fermentum sit amet, lacinia in mi. Nulla facilisi. Integer a lacus ac odio hendrerit sollicitudin.</string>
+    <string name="need">Need: </string>
+    <string name="my_capability">I can make this many: </string>
+    <string name="ok">Ok</string>
 </resources>
