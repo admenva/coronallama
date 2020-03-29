@@ -8,5 +8,6 @@ data class Request constructor(
     val description: String,
     val location: String,
     val imageResource: String,
-    val needs: Int
+    val requested: Int,
+    val stillNeeded: Int
 ) : Serializable

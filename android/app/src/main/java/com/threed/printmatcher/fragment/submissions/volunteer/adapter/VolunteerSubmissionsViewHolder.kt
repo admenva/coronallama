@@ -1,4 +1,4 @@
-package com.threed.printmatcher.fragment.submissions.adapter
+package com.threed.printmatcher.fragment.submissions.volunteer.adapter
 
 import android.view.View
 import android.widget.ImageView
@@ -6,7 +6,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.threed.printmatcher.R
 
-class SubmissionsViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+class VolunteerSubmissionsViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
     val root: View = itemView.findViewById(R.id.root)
     val image: ImageView = itemView.findViewById(R.id.image)

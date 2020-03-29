@@ -1,8 +1,8 @@
-package com.threed.printmatcher.fragment.submissions.mvp
+package com.threed.printmatcher.fragment.submissions.volunteer.mvp
 
 import com.threed.printmatcher.model.Submission
 
-interface SubmissionsContract {
+interface VolunteerSubmissionsContract {
 
     interface Presenter {
         fun onViewAvailable(view: View)

@@ -26,14 +26,14 @@ class RequestDetailsPresenter @Inject constructor(
         mView.showHospitalImage(request.imageResource)
         mView.showTitle(request.title)
         mView.showDescription(request.description)
-        mView.showNeeds(request.needs)
+        mView.showNeeds(request.requested)
         mView.showLocation(request.location)
         mView.showMapImage()
         mView.setupCommittedQuantitySection()
     }
 
     override fun onOkButtonClicked(committedQuantity: Int) {
-        if (committedQuantity > request.needs) {
+        if (committedQuantity > request.requested) {
             toastManager.show(R.string.error_quantity_overflown)
         } else {
             mView.navigateToRequestConfirmation(

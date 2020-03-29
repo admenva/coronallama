@@ -113,12 +113,17 @@
 
     <fragment
         android:id="@+id/volunteer_submissions_fragment"
-        android:name="com.threed.printmatcher.fragment.submissions.SubmissionsFragment"
+        android:name="com.threed.printmatcher.fragment.submissions.volunteer.VolunteerSubmissionsFragment"
         tools:layout="@layout/fragment_volunteer_submissions">
 
         <argument
             android:name="submission"
             app:argType="com.threed.printmatcher.model.Submission" />
     </fragment>
+
+    <fragment
+        android:id="@+id/institution_submissions_fragment"
+        android:name="com.threed.printmatcher.fragment.submissions.institution.InstitutionSubmissionsFragment"
+        tools:layout="@layout/fragment_institution_submissions" />
 
 </navigation>

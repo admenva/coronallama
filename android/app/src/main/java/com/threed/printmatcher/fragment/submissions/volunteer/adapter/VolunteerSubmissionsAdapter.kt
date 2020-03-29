@@ -1,21 +1,21 @@
-package com.threed.printmatcher.fragment.submissions.adapter
+package com.threed.printmatcher.fragment.submissions.volunteer.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.squareup.picasso.Picasso
 import com.threed.printmatcher.R
-import com.threed.printmatcher.fragment.submissions.mvp.SubmissionsContract
+import com.threed.printmatcher.fragment.submissions.volunteer.mvp.VolunteerSubmissionsContract
 import javax.inject.Inject
 
-class SubmissionsAdapter @Inject constructor(
-    private val presenter: SubmissionsContract.Presenter,
-    private val model: SubmissionsContract.Model,
+class VolunteerSubmissionsAdapter @Inject constructor(
+    private val presenter: VolunteerSubmissionsContract.Presenter,
+    private val model: VolunteerSubmissionsContract.Model,
     private val picasso: Picasso
-) : RecyclerView.Adapter<SubmissionsViewHolder>() {
+) : RecyclerView.Adapter<VolunteerSubmissionsViewHolder>() {
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SubmissionsViewHolder {
-        return SubmissionsViewHolder(
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): VolunteerSubmissionsViewHolder {
+        return VolunteerSubmissionsViewHolder(
             LayoutInflater.from(parent.context).inflate(
                 R.layout.submissions_list_row,
                 parent,
@@ -24,7 +24,7 @@ class SubmissionsAdapter @Inject constructor(
         )
     }
 
-    override fun onBindViewHolder(holder: SubmissionsViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: VolunteerSubmissionsViewHolder, position: Int) {
         val item = model.getItemAt(position)
         holder.location.text = item.request.location
         holder.title.text = "${item.committedQuantity} ${item.request.title}"

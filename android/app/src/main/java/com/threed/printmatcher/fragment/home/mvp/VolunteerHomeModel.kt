@@ -17,7 +17,8 @@ class VolunteerHomeModel @Inject constructor() : VolunteerHomeContract.Model {
                 "description",
                 "Whitechapel Rd, Whitechapel, London E1 1FR, United Kingdom",
                 "https://www.bartshealth.nhs.uk/media/images/versions/img94joktmu717322.jpg",
-                1000
+                1000,
+                900
             )
         )
         items.add(
@@ -27,7 +28,8 @@ class VolunteerHomeModel @Inject constructor() : VolunteerHomeContract.Model {
                 "description",
                 "235 Euston Rd, Bloomsbury, London NW1 2BU, United Kingdom",
                 "https://upload.wikimedia.org/wikipedia/commons/b/b5/University_College_Hospital_-_New_Building_-_London_-_020504.jpg",
-                2000
+                2000,
+                1900
             )
         )
         items.add(
@@ -36,7 +38,9 @@ class VolunteerHomeModel @Inject constructor() : VolunteerHomeContract.Model {
                 "Barts Health NHS Trust",
                 "description",
                 "The Royal London Hospital, Whitechapel Rd, London E1 1BB",
-                "https://d3d00swyhr67nd.cloudfront.net/_source/COL_BAR_collection_image.jpg", 500
+                "https://d3d00swyhr67nd.cloudfront.net/_source/COL_BAR_collection_image.jpg",
+                500,
+                475
             )
         )
         items.add(
@@ -46,7 +50,8 @@ class VolunteerHomeModel @Inject constructor() : VolunteerHomeContract.Model {
                 "description",
                 "Westminster Bridge Rd, Bishop's, London SE1 7EH, United Kingdom",
                 "https://www.southwarknews.co.uk/wp-content/uploads/2016/09/St_Thomas_Hospital_-_SB.jpg",
-                250
+                250,
+                125
             )
         )
         items.add(
@@ -56,7 +61,8 @@ class VolunteerHomeModel @Inject constructor() : VolunteerHomeContract.Model {
                 "description",
                 "Whitechapel Rd, Whitechapel, London E1 1FR, United Kingdom",
                 "https://www.bartshealth.nhs.uk/media/images/versions/img94joktmu717322.jpg",
-                1000
+                1000,
+                560
             )
         )
         items.add(
@@ -66,7 +72,8 @@ class VolunteerHomeModel @Inject constructor() : VolunteerHomeContract.Model {
                 "description",
                 "235 Euston Rd, Bloomsbury, London NW1 2BU, United Kingdom",
                 "https://upload.wikimedia.org/wikipedia/commons/b/b5/University_College_Hospital_-_New_Building_-_London_-_020504.jpg",
-                2000
+                2000,
+                1870
             )
         )
         items.add(
@@ -75,7 +82,9 @@ class VolunteerHomeModel @Inject constructor() : VolunteerHomeContract.Model {
                 "Barts Health NHS Trust",
                 "description",
                 "The Royal London Hospital, Whitechapel Rd, London E1 1BB",
-                "https://d3d00swyhr67nd.cloudfront.net/_source/COL_BAR_collection_image.jpg", 500
+                "https://d3d00swyhr67nd.cloudfront.net/_source/COL_BAR_collection_image.jpg",
+                500,
+                500
             )
         )
         items.add(
@@ -85,7 +94,8 @@ class VolunteerHomeModel @Inject constructor() : VolunteerHomeContract.Model {
                 "description",
                 "Westminster Bridge Rd, Bishop's, London SE1 7EH, United Kingdom",
                 "https://www.southwarknews.co.uk/wp-content/uploads/2016/09/St_Thomas_Hospital_-_SB.jpg",
-                250
+                250,
+                100
             )
         )
         items.add(
@@ -95,6 +105,7 @@ class VolunteerHomeModel @Inject constructor() : VolunteerHomeContract.Model {
                 "description",
                 "Whitechapel Rd, Whitechapel, London E1 1FR, United Kingdom",
                 "https://www.bartshealth.nhs.uk/media/images/versions/img94joktmu717322.jpg",
+                1000,
                 1000
             )
         )
@@ -105,7 +116,8 @@ class VolunteerHomeModel @Inject constructor() : VolunteerHomeContract.Model {
                 "description",
                 "235 Euston Rd, Bloomsbury, London NW1 2BU, United Kingdom",
                 "https://upload.wikimedia.org/wikipedia/commons/b/b5/University_College_Hospital_-_New_Building_-_London_-_020504.jpg",
-                2000
+                2000,
+                10
             )
         )
         items.add(
@@ -114,7 +126,9 @@ class VolunteerHomeModel @Inject constructor() : VolunteerHomeContract.Model {
                 "Barts Health NHS Trust",
                 "description",
                 "The Royal London Hospital, Whitechapel Rd, London E1 1BB",
-                "https://d3d00swyhr67nd.cloudfront.net/_source/COL_BAR_collection_image.jpg", 500
+                "https://d3d00swyhr67nd.cloudfront.net/_source/COL_BAR_collection_image.jpg",
+                500,
+                465
             )
         )
         items.add(
@@ -124,7 +138,8 @@ class VolunteerHomeModel @Inject constructor() : VolunteerHomeContract.Model {
                 "description",
                 "Westminster Bridge Rd, Bishop's, London SE1 7EH, United Kingdom",
                 "https://www.southwarknews.co.uk/wp-content/uploads/2016/09/St_Thomas_Hospital_-_SB.jpg",
-                250
+                250,
+                120
             )
         )
     }

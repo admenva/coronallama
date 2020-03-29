@@ -1,4 +1,4 @@
-package com.threed.printmatcher.fragment.submissions.mvp
+package com.threed.printmatcher.fragment.submissions.volunteer.mvp
 
 import com.threed.printmatcher.fragment.di.FragmentScope
 import com.threed.printmatcher.model.MockedSubmissionList
@@ -6,11 +6,11 @@ import com.threed.printmatcher.model.Submission
 import javax.inject.Inject
 
 @FragmentScope
-class SubmissionsModel @Inject constructor(
+class VolunteerSubmissionsModel @Inject constructor(
     mockedSubmissions: MockedSubmissionList,
     submissionFromPreviousPage: Submission
 ) :
-    SubmissionsContract.Model {
+    VolunteerSubmissionsContract.Model {
 
     private val submissions: MutableList<Submission> = mutableListOf()
 

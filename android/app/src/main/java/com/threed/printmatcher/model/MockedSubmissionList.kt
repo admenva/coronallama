@@ -16,7 +16,8 @@ class MockedSubmissionList @Inject constructor(dateCreator: DateCreator) {
                     "description",
                     "Whitechapel Rd, Whitechapel, London E1 1FR, United Kingdom",
                     "https://www.bartshealth.nhs.uk/media/images/versions/img94joktmu717322.jpg",
-                    1000
+                    1000,
+                    850
                 ),
                 State.PENDING,
                 50,
@@ -32,6 +33,7 @@ class MockedSubmissionList @Inject constructor(dateCreator: DateCreator) {
                     "description",
                     "235 Euston Rd, Bloomsbury, London NW1 2BU, United Kingdom",
                     "https://upload.wikimedia.org/wikipedia/commons/b/b5/University_College_Hospital_-_New_Building_-_London_-_020504.jpg",
+                    2000,
                     2000
                 ),
                 State.PENDING,
@@ -48,7 +50,8 @@ class MockedSubmissionList @Inject constructor(dateCreator: DateCreator) {
                     "description",
                     "The Royal London Hospital, Whitechapel Rd, London E1 1BB",
                     "https://d3d00swyhr67nd.cloudfront.net/_source/COL_BAR_collection_image.jpg",
-                    500
+                    500,
+                    120
                 ),
                 State.SENT,
                 200,

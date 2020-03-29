@@ -1,20 +1,20 @@
-package com.threed.printmatcher.fragment.submissions
+package com.threed.printmatcher.fragment.submissions.volunteer
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.threed.printmatcher.R
-import com.threed.printmatcher.fragment.submissions.mvp.SubmissionsContract
+import com.threed.printmatcher.fragment.submissions.volunteer.mvp.VolunteerSubmissionsContract
 import dagger.android.support.DaggerFragment
 import javax.inject.Inject
 
-class SubmissionsFragment : DaggerFragment() {
+class VolunteerSubmissionsFragment : DaggerFragment() {
 
     @Inject
-    lateinit var mPresenter: SubmissionsContract.Presenter
+    lateinit var mPresenter: VolunteerSubmissionsContract.Presenter
     @Inject
-    lateinit var mView: SubmissionsContract.View
+    lateinit var mView: VolunteerSubmissionsContract.View
 
     override fun onCreateView(
         inflater: LayoutInflater,

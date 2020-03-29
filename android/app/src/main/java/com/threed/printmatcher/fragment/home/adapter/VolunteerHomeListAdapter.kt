@@ -29,7 +29,7 @@ class VolunteerHomeListAdapter @Inject constructor(
     override fun onBindViewHolder(holder: VolunteerHomeListViewHolder, position: Int) {
         val item = model.getItemAt(position)
         holder.location.text = item.location
-        holder.title.text = "${item.needs} ${item.title}"
+        holder.title.text = "${item.requested} ${item.title}"
         holder.hospital.text = item.hospitalName
         picasso.load(item.imageResource).into(holder.image)
         holder.root.setOnClickListener { presenter.onRequestItemClicked(item) }
