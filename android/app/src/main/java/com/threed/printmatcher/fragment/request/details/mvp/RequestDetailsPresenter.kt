@@ -3,13 +3,17 @@ package com.threed.printmatcher.fragment.request.details.mvp
 import com.threed.printmatcher.R
 import com.threed.printmatcher.fragment.di.FragmentScope
 import com.threed.printmatcher.model.Request
+import com.threed.printmatcher.model.State
+import com.threed.printmatcher.model.Submission
+import com.threed.printmatcher.util.DateCreator
 import com.threed.printmatcher.util.ToastManager
 import javax.inject.Inject
 
 @FragmentScope
 class RequestDetailsPresenter @Inject constructor(
     private val request: Request,
-    private val toastManager: ToastManager
+    private val toastManager: ToastManager,
+    private val dateCreator: DateCreator
 ) : RequestDetailsContract.Presenter {
 
     private lateinit var mView: RequestDetailsContract.View
@@ -32,7 +36,14 @@ class RequestDetailsPresenter @Inject constructor(
         if (committedQuantity > request.needs) {
             toastManager.show(R.string.error_quantity_overflown)
         } else {
-            mView.navigateToRequestConfirmation(request, committedQuantity)
+            mView.navigateToRequestConfirmation(
+                Submission(
+                    request,
+                    State.PENDING,
+                    committedQuantity,
+                    dateCreator.createDate(2020, 4, 16)
+                )
+            )
         }
     }
 }

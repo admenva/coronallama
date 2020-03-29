@@ -5,7 +5,7 @@ import com.threed.printmatcher.fragment.request.confirmation.RequestConfirmation
 import com.threed.printmatcher.fragment.request.confirmation.mvp.RequestConfirmationContract
 import com.threed.printmatcher.fragment.request.confirmation.mvp.RequestConfirmationPresenter
 import com.threed.printmatcher.fragment.request.confirmation.mvp.RequestConfirmationView
-import com.threed.printmatcher.model.Request
+import com.threed.printmatcher.model.Submission
 import com.threed.printmatcher.model.User
 import dagger.Binds
 import dagger.Module
@@ -23,19 +23,12 @@ abstract class RequestConfirmationModule {
     @Module
     companion object {
 
-        @Provides
-        @JvmStatic
-        @FragmentScope
-        fun request(fragment: RequestConfirmationFragment): Request {
-            return fragment.arguments!!.getSerializable("request") as Request
-        }
 
         @Provides
         @JvmStatic
-        @CommittedQuantity
         @FragmentScope
-        fun committedQuantity(fragment: RequestConfirmationFragment): Int {
-            return fragment.arguments!!.getInt("committedQuantity")
+        fun submission(fragment: RequestConfirmationFragment): Submission {
+            return fragment.arguments!!.getSerializable("submission") as Submission
         }
 
         @Provides

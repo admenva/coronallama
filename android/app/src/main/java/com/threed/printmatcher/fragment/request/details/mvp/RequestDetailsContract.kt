@@ -1,6 +1,6 @@
 package com.threed.printmatcher.fragment.request.details.mvp
 
-import com.threed.printmatcher.model.Request
+import com.threed.printmatcher.model.Submission
 
 interface RequestDetailsContract {
 
@@ -19,6 +19,6 @@ interface RequestDetailsContract {
         fun showLocation(location: String)
         fun showMapImage()
         fun setupCommittedQuantitySection()
-        fun navigateToRequestConfirmation(request: Request, committedQuantity: Int)
+        fun navigateToRequestConfirmation(submission: Submission)
     }
 }

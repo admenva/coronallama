@@ -1,5 +1,7 @@
 package com.threed.printmatcher.fragment.request.confirmation.mvp
 
+import com.threed.printmatcher.model.Submission
+
 interface RequestConfirmationContract {
 
     interface Presenter {
@@ -17,5 +19,6 @@ interface RequestConfirmationContract {
         fun fillUserContact(contact: String)
         fun fillUserLocation(address: String)
         fun fillCommittedQuantity(committedQuantity: Int)
+        fun navigateToSubmissionsListPage(submission: Submission)
     }
 }
