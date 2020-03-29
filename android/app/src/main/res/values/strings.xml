@@ -29,4 +29,7 @@
     <string name="menu_slideshow">Slideshow</string>
     <string name="menu_home">Home</string>
     <string name="my_submissions">My submissions</string>
+    <string name="requested_formatter">Requested: %1$d</string>
+    <string name="pending_completed_formatter">Pending/Completed: %1$d</string>
+    <string name="needs_formatter">Needs: %1$d</string>
 </resources>

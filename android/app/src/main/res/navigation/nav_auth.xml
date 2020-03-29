@@ -31,7 +31,7 @@
 
         <action
             android:id="@+id/login_to_volunteer_home"
-            app:destination="@id/volunteer_home_fragment"
+            app:destination="@id/institution_requests_fragment"
             app:enterAnim="@anim/slide_in_right"
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_left"
@@ -62,7 +62,7 @@
 
     <fragment
         android:id="@+id/volunteer_home_fragment"
-        android:name="com.threed.printmatcher.fragment.home.VolunteerHomeFragment"
+        android:name="com.threed.printmatcher.fragment.volunteer.request.list.VolunteerHomeFragment"
         tools:layout="@layout/fragment_volunteer_home">
 
         <action
@@ -76,7 +76,7 @@
 
     <fragment
         android:id="@+id/request_detail_fragment"
-        android:name="com.threed.printmatcher.fragment.request.details.RequestDetailsFragment"
+        android:name="com.threed.printmatcher.fragment.volunteer.request.details.RequestDetailsFragment"
         tools:layout="@layout/fragment_request_details">
 
         <action
@@ -95,7 +95,7 @@
 
     <fragment
         android:id="@+id/request_confirmation_fragment"
-        android:name="com.threed.printmatcher.fragment.request.confirmation.RequestConfirmationFragment"
+        android:name="com.threed.printmatcher.fragment.volunteer.request.confirmation.RequestConfirmationFragment"
         tools:layout="@layout/fragment_request_confirmation">
 
         <action
@@ -113,12 +113,17 @@
 
     <fragment
         android:id="@+id/volunteer_submissions_fragment"
-        android:name="com.threed.printmatcher.fragment.submissions.SubmissionsFragment"
+        android:name="com.threed.printmatcher.fragment.volunteer.submissions.VolunteerSubmissionsFragment"
         tools:layout="@layout/fragment_volunteer_submissions">
 
         <argument
             android:name="submission"
             app:argType="com.threed.printmatcher.model.Submission" />
     </fragment>
+
+    <fragment
+        android:id="@+id/institution_requests_fragment"
+        android:name="com.threed.printmatcher.fragment.institution.requests.InstitutionRequestsFragment"
+        tools:layout="@layout/fragment_institution_requests" />
 
 </navigation>
