@@ -24,6 +24,6 @@ class SignUpFragment : DaggerFragment() {
     }
 
     private fun navigateToVolunteerHome(view: View) {
-        view.findNavController().navigate(SignUpFragmentDirections.signupToVolunteerHome())
+        view.findNavController().navigate(SignUpFragmentDirections.signupToVolunteer())
     }
 }

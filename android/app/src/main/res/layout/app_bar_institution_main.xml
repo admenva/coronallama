@@ -18,6 +18,6 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
-    <include layout="@layout/view_volunteer_main" />
+    <include layout="@layout/view_institution_main" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

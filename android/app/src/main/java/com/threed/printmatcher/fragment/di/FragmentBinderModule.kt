@@ -1,12 +1,12 @@
 package com.threed.printmatcher.fragment.di
 
-import com.threed.printmatcher.fragment.home.VolunteerMainFragment
-import com.threed.printmatcher.fragment.home.di.VolunteerMainModule
+import com.threed.printmatcher.fragment.volunteer.main.VolunteerMainFragment
+import com.threed.printmatcher.fragment.volunteer.main.di.VolunteerMainModule
 import com.threed.printmatcher.fragment.institution.requests.InstitutionRequestsFragment
 import com.threed.printmatcher.fragment.login.LoginFragment
 import com.threed.printmatcher.fragment.login.di.LoginFragmentModule
-import com.threed.printmatcher.fragment.main.StartFragment
-import com.threed.printmatcher.fragment.main.di.StartFragmentModule
+import com.threed.printmatcher.fragment.start.StartFragment
+import com.threed.printmatcher.fragment.start.di.StartFragmentModule
 import com.threed.printmatcher.fragment.volunteer.request.confirmation.RequestConfirmationFragment
 import com.threed.printmatcher.fragment.volunteer.request.confirmation.di.RequestConfirmationModule
 import com.threed.printmatcher.fragment.volunteer.request.details.RequestDetailsFragment

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_institution">
+
+    <fragment
+        android:id="@+id/institution_requests_fragment"
+        android:name="com.threed.printmatcher.fragment.institution.requests.InstitutionRequestsFragment"
+        tools:layout="@layout/fragment_institution_requests" />
+
+</navigation>

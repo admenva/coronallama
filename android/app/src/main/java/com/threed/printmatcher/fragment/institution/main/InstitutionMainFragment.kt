@@ -1,4 +1,4 @@
-package com.threed.printmatcher.fragment.home
+package com.threed.printmatcher.fragment.institution.main
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,7 +10,7 @@ import com.threed.printmatcher.activity.main.AppViewModel
 import com.threed.printmatcher.model.User.Volunteer
 import dagger.android.support.DaggerFragment
 
-class VolunteerMainFragment : DaggerFragment() {
+class InstitutionMainFragment : DaggerFragment() {
 
     private val appViewModel: AppViewModel by activityViewModels()
 

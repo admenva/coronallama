@@ -1,4 +1,4 @@
-package com.threed.printmatcher.fragment.main.di
+package com.threed.printmatcher.fragment.start.di
 
 import dagger.Module
 
