@@ -15,7 +15,7 @@ class MockedRequests @Inject constructor() {
                 "The Royal London Hospital",
                 "description",
                 "Whitechapel Rd, Whitechapel, London E1 1FR, United Kingdom",
-                "https://www.bartshealth.nhs.uk/media/images/versions/img94joktmu717322.jpg",
+                "https://www.3dprintingmedia.network/wp-content/uploads/2020/03/despiece-en-plano-780x470.png",
                 1000,
                 900
             )
@@ -26,7 +26,7 @@ class MockedRequests @Inject constructor() {
                 "University College Hospital",
                 "description",
                 "235 Euston Rd, Bloomsbury, London NW1 2BU, United Kingdom",
-                "https://upload.wikimedia.org/wikipedia/commons/b/b5/University_College_Hospital_-_New_Building_-_London_-_020504.jpg",
+                "https://ameralabs.com/uploads/SLA-3D-printing-safety-measures.jpg",
                 2000,
                 1900
             )
@@ -37,7 +37,7 @@ class MockedRequests @Inject constructor() {
                 "Barts Health NHS Trust",
                 "description",
                 "The Royal London Hospital, Whitechapel Rd, London E1 1BB",
-                "https://d3d00swyhr67nd.cloudfront.net/_source/COL_BAR_collection_image.jpg",
+                "https://idtxs3.imgix.net/si/40000/64/96.jpg?w=800",
                 500,
                 475
             )
@@ -48,7 +48,7 @@ class MockedRequests @Inject constructor() {
                 "St Thomas' Hospital",
                 "description",
                 "Westminster Bridge Rd, Bishop's, London SE1 7EH, United Kingdom",
-                "https://www.southwarknews.co.uk/wp-content/uploads/2016/09/St_Thomas_Hospital_-_SB.jpg",
+                "https://images-na.ssl-images-amazon.com/images/I/81Csmw6HMtL._AC_SX466_.jpg",
                 250,
                 125
             )
