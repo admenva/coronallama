@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/_16">
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="200dp"
+            android:layout_height="100dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/image"
+            android:paddingTop="@dimen/_16"
+            android:textAllCaps="true"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="@dimen/_24"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:id="@+id/quantity_holder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/description"
+            android:layout_alignParentStart="true"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/_16">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/need"
+                android:layout_marginEnd="@dimen/_16"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/quantity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/holo_red_dark" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/quantity_holder"
+            android:layout_alignParentStart="true"
+            android:drawableLeft="@drawable/marker" />
+
+        <ImageView
+            android:id="@+id/map_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/location"
+            android:layout_alignParentStart="true"
+            android:scaleType="centerCrop" />
+
+        <LinearLayout
+            android:id="@+id/commited_quantity_holder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/map_image"
+            android:layout_alignParentStart="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_16"
+                android:text="@string/my_capability" />
+
+            <ImageView
+                android:id="@+id/minus"
+                android:layout_width="@dimen/_16"
+                android:layout_height="@dimen/_16"
+                android:layout_marginEnd="@dimen/_16"
+                android:clickable="true"
+                android:focusable="true"
+                android:src="@drawable/minus" />
+
+            <EditText
+                android:id="@+id/commited_quantity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_16"
+                android:gravity="center"
+                android:inputType="number"
+                android:text="0" />
+
+            <ImageView
+                android:id="@+id/plus"
+                android:layout_width="@dimen/_16"
+                android:layout_height="@dimen/_16"
+                android:layout_marginEnd="@dimen/_16"
+                android:clickable="true"
+                android:focusable="true"
+                android:src="@drawable/plus" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/ok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/commited_quantity_holder"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_16"
+            android:textColor="@color/white"
+            android:background="@drawable/button_round_corners"
+            android:padding="@dimen/_16"
+            android:text="@string/ok" />
+    </RelativeLayout>
+</ScrollView>

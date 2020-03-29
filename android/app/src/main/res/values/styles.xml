@@ -7,4 +7,10 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="AppTheme.PrimaryBtn" parent="TextAppearance.MaterialComponents.Button">
+        <item name="android:textColor">@color/colorText</item>
+        <item name="android:background">@drawable/bg_primary_btn</item>
+        <item name="android:padding">18dp</item>
+    </style>
+
 </resources>
