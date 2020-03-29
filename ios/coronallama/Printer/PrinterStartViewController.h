@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  PrinterStartViewController.h
 //  coronallama
 //
 //  Created by Ricardo Suárez Martínez on 3/28/20.
@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+NS_ASSUME_NONNULL_BEGIN
 
+@interface PrinterStartViewController : UIViewController
 
 @end
 
+NS_ASSUME_NONNULL_END

@@ -7,9 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DF468181242FB818003D3AF8 /* HospitalStartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF468180242FB818003D3AF8 /* HospitalStartViewController.m */; };
+		DF468186242FB97F003D3AF8 /* PrinterStartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF468185242FB97F003D3AF8 /* PrinterStartViewController.m */; };
+		DF468189242FCA99003D3AF8 /* HospitalSubmitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF468188242FCA99003D3AF8 /* HospitalSubmitViewController.m */; };
 		DFE962AA242F5DDF00ECDE25 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DFE962A9242F5DDF00ECDE25 /* AppDelegate.m */; };
 		DFE962AD242F5DDF00ECDE25 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DFE962AC242F5DDF00ECDE25 /* SceneDelegate.m */; };
-		DFE962B0242F5DDF00ECDE25 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFE962AF242F5DDF00ECDE25 /* ViewController.m */; };
+		DFE962B0242F5DDF00ECDE25 /* StartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFE962AF242F5DDF00ECDE25 /* StartViewController.m */; };
 		DFE962B3242F5DDF00ECDE25 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFE962B1242F5DDF00ECDE25 /* Main.storyboard */; };
 		DFE962B5242F5DE100ECDE25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFE962B4242F5DE100ECDE25 /* Assets.xcassets */; };
 		DFE962B8242F5DE100ECDE25 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFE962B6242F5DE100ECDE25 /* LaunchScreen.storyboard */; };
@@ -17,13 +20,19 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DF46817F242FB818003D3AF8 /* HospitalStartViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HospitalStartViewController.h; sourceTree = "<group>"; };
+		DF468180242FB818003D3AF8 /* HospitalStartViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HospitalStartViewController.m; sourceTree = "<group>"; };
+		DF468184242FB97F003D3AF8 /* PrinterStartViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrinterStartViewController.h; sourceTree = "<group>"; };
+		DF468185242FB97F003D3AF8 /* PrinterStartViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PrinterStartViewController.m; sourceTree = "<group>"; };
+		DF468187242FCA99003D3AF8 /* HospitalSubmitViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HospitalSubmitViewController.h; sourceTree = "<group>"; };
+		DF468188242FCA99003D3AF8 /* HospitalSubmitViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HospitalSubmitViewController.m; sourceTree = "<group>"; };
 		DFE962A5242F5DDF00ECDE25 /* coronallama.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = coronallama.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFE962A8242F5DDF00ECDE25 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		DFE962A9242F5DDF00ECDE25 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		DFE962AB242F5DDF00ECDE25 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 		DFE962AC242F5DDF00ECDE25 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
-		DFE962AE242F5DDF00ECDE25 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		DFE962AF242F5DDF00ECDE25 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		DFE962AE242F5DDF00ECDE25 /* StartViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StartViewController.h; sourceTree = "<group>"; };
+		DFE962AF242F5DDF00ECDE25 /* StartViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StartViewController.m; sourceTree = "<group>"; };
 		DFE962B2242F5DDF00ECDE25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DFE962B4242F5DE100ECDE25 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DFE962B7242F5DE100ECDE25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -42,6 +51,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DF468182242FB831003D3AF8 /* Hospital */ = {
+			isa = PBXGroup;
+			children = (
+				DF46817F242FB818003D3AF8 /* HospitalStartViewController.h */,
+				DF468180242FB818003D3AF8 /* HospitalStartViewController.m */,
+				DF468187242FCA99003D3AF8 /* HospitalSubmitViewController.h */,
+				DF468188242FCA99003D3AF8 /* HospitalSubmitViewController.m */,
+			);
+			path = Hospital;
+			sourceTree = "<group>";
+		};
+		DF468183242FB867003D3AF8 /* Printer */ = {
+			isa = PBXGroup;
+			children = (
+				DF468184242FB97F003D3AF8 /* PrinterStartViewController.h */,
+				DF468185242FB97F003D3AF8 /* PrinterStartViewController.m */,
+			);
+			path = Printer;
+			sourceTree = "<group>";
+		};
 		DFE9629C242F5DDF00ECDE25 = {
 			isa = PBXGroup;
 			children = (
@@ -65,8 +94,10 @@
 				DFE962A9242F5DDF00ECDE25 /* AppDelegate.m */,
 				DFE962AB242F5DDF00ECDE25 /* SceneDelegate.h */,
 				DFE962AC242F5DDF00ECDE25 /* SceneDelegate.m */,
-				DFE962AE242F5DDF00ECDE25 /* ViewController.h */,
-				DFE962AF242F5DDF00ECDE25 /* ViewController.m */,
+				DFE962AE242F5DDF00ECDE25 /* StartViewController.h */,
+				DF468182242FB831003D3AF8 /* Hospital */,
+				DF468183242FB867003D3AF8 /* Printer */,
+				DFE962AF242F5DDF00ECDE25 /* StartViewController.m */,
 				DFE962B1242F5DDF00ECDE25 /* Main.storyboard */,
 				DFE962B4242F5DE100ECDE25 /* Assets.xcassets */,
 				DFE962B6242F5DE100ECDE25 /* LaunchScreen.storyboard */,
@@ -146,9 +177,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DFE962B0242F5DDF00ECDE25 /* ViewController.m in Sources */,
+				DF468181242FB818003D3AF8 /* HospitalStartViewController.m in Sources */,
+				DFE962B0242F5DDF00ECDE25 /* StartViewController.m in Sources */,
 				DFE962AA242F5DDF00ECDE25 /* AppDelegate.m in Sources */,
 				DFE962BB242F5DE100ECDE25 /* main.m in Sources */,
+				DF468189242FCA99003D3AF8 /* HospitalSubmitViewController.m in Sources */,
+				DF468186242FB97F003D3AF8 /* PrinterStartViewController.m in Sources */,
 				DFE962AD242F5DDF00ECDE25 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

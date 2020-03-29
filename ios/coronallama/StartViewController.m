@@ -1,18 +1,18 @@
 //
-//  ViewController.m
+//  StartViewController.m
 //  coronallama
 //
 //  Created by Ricardo Suárez Martínez on 3/28/20.
 //  Copyright © 2020 Coronallama. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "StartViewController.h"
 
-@interface ViewController ()
+@interface StartViewController ()
 
 @end
 
-@implementation ViewController
+@implementation StartViewController
 
 - (void)viewDidLoad {
   [super viewDidLoad];
