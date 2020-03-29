@@ -6,8 +6,10 @@ import com.threed.printmatcher.fragment.login.LoginFragment
 import com.threed.printmatcher.fragment.login.di.LoginFragmentModule
 import com.threed.printmatcher.fragment.main.StartFragment
 import com.threed.printmatcher.fragment.main.di.StartFragmentModule
-import com.threed.printmatcher.fragment.requestdetails.RequestDetailsFragment
-import com.threed.printmatcher.fragment.requestdetails.di.RequestDetailsModule
+import com.threed.printmatcher.fragment.request.confirmation.RequestConfirmationFragment
+import com.threed.printmatcher.fragment.request.confirmation.di.RequestConfirmationModule
+import com.threed.printmatcher.fragment.request.details.RequestDetailsFragment
+import com.threed.printmatcher.fragment.request.details.di.RequestDetailsModule
 import com.threed.printmatcher.fragment.signup.SignUpFragment
 import com.threed.printmatcher.fragment.signup.di.SignupFragmentModule
 import dagger.Module
@@ -35,4 +37,8 @@ abstract class FragmentBinderModule {
     @ContributesAndroidInjector(modules = [RequestDetailsModule::class])
     @FragmentScope
     abstract fun provideRequestDetailsFragment(): RequestDetailsFragment
+
+    @ContributesAndroidInjector(modules = [RequestConfirmationModule::class])
+    @FragmentScope
+    abstract fun provideRequestConfirmationFragment(): RequestConfirmationFragment
 }

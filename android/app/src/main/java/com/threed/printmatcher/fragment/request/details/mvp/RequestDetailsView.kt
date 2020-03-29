@@ -1,13 +1,15 @@
-package com.threed.printmatcher.fragment.requestdetails.mvp
+package com.threed.printmatcher.fragment.request.details.mvp
 
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.navigation.findNavController
 import com.squareup.picasso.Picasso
 import com.threed.printmatcher.fragment.di.FragmentScope
-import com.threed.printmatcher.util.ToastManager
+import com.threed.printmatcher.fragment.request.details.RequestDetailsFragmentDirections
+import com.threed.printmatcher.model.Request
 import kotlinx.android.synthetic.main.fragment_request_details.view.*
 import javax.inject.Inject
 
@@ -16,10 +18,10 @@ private const val STATIC_MAP_IMAGE_RESOURCE = "https://i.stack.imgur.com/dApg7.p
 @FragmentScope
 class RequestDetailsView @Inject constructor(
     private val picasso: Picasso,
-    private val toastManager: ToastManager
-) :
-    RequestDetailsContract.View {
+    private val presenter: RequestDetailsContract.Presenter
+) : RequestDetailsContract.View {
 
+    private lateinit var pageLayout: View
     private lateinit var image: ImageView
     private lateinit var titleTv: TextView
     private lateinit var descriptionTv: TextView
@@ -27,7 +29,7 @@ class RequestDetailsView @Inject constructor(
     private lateinit var locationTv: TextView
     private lateinit var mapImage: ImageView
     private lateinit var minus: ImageView
-    private lateinit var commitedQuantity: EditText
+    private lateinit var committedQuantity: EditText
     private lateinit var plus: ImageView
     private lateinit var okBtn: Button
 
@@ -39,9 +41,10 @@ class RequestDetailsView @Inject constructor(
         locationTv = pageLayout.location
         mapImage = pageLayout.map_image
         minus = pageLayout.minus
-        commitedQuantity = pageLayout.commited_quantity
+        committedQuantity = pageLayout.commited_quantity
         plus = pageLayout.plus
         okBtn = pageLayout.ok
+        this.pageLayout = pageLayout
         setupOkBtn()
     }
 
@@ -69,33 +72,40 @@ class RequestDetailsView @Inject constructor(
         picasso.load(STATIC_MAP_IMAGE_RESOURCE).into(mapImage)
     }
 
-    override fun setupCommitedQuantitySection(maxValue: Int) {
+    override fun setupCommittedQuantitySection() {
         setupMinus()
-        setupPlus(maxValue)
+        setupPlus()
         setupTextBox()
     }
 
-    private fun setupTextBox() {
-        commitedQuantity.setText("0")
+    override fun navigateToRequestConfirmation(request: Request, committedQuantity: Int) {
+        pageLayout.findNavController().navigate(
+            RequestDetailsFragmentDirections.volunteerRequestToConfirmation(
+                request, committedQuantity
+            )
+        )
     }
 
-    private fun setupPlus(maxValue: Int) {
+    private fun setupTextBox() {
+        committedQuantity.setText("0")
+    }
+
+    private fun setupPlus() {
         plus.setOnClickListener {
-            commitedQuantity.setText((commitedQuantity.text.toString().toInt() + 1).toString())
+            committedQuantity.setText((committedQuantity.text.toString().toInt() + 1).toString())
         }
     }
 
     private fun setupMinus() {
         minus.setOnClickListener {
-            val quantity = commitedQuantity.text.toString().toInt()
+            val quantity = committedQuantity.text.toString().toInt()
             if (quantity > 1) {
-                commitedQuantity.setText((commitedQuantity.text.toString().toInt() - 1).toString())
+                committedQuantity.setText((committedQuantity.text.toString().toInt() - 1).toString())
             }
         }
     }
 
     private fun setupOkBtn() {
-        //TODO set up validaton for the quantity
-        okBtn.setOnClickListener { toastManager.show("Ok clicked!") }
+        okBtn.setOnClickListener { presenter.onOkButtonClicked(committedQuantity.text.toString().toInt()) }
     }
 }

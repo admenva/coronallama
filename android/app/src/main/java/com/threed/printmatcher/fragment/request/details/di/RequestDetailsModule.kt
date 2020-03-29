@@ -1,10 +1,10 @@
-package com.threed.printmatcher.fragment.requestdetails.di
+package com.threed.printmatcher.fragment.request.details.di
 
 import com.threed.printmatcher.fragment.di.FragmentScope
-import com.threed.printmatcher.fragment.requestdetails.RequestDetailsFragment
-import com.threed.printmatcher.fragment.requestdetails.mvp.RequestDetailsContract
-import com.threed.printmatcher.fragment.requestdetails.mvp.RequestDetailsPresenter
-import com.threed.printmatcher.fragment.requestdetails.mvp.RequestDetailsView
+import com.threed.printmatcher.fragment.request.details.RequestDetailsFragment
+import com.threed.printmatcher.fragment.request.details.mvp.RequestDetailsContract
+import com.threed.printmatcher.fragment.request.details.mvp.RequestDetailsPresenter
+import com.threed.printmatcher.fragment.request.details.mvp.RequestDetailsView
 import com.threed.printmatcher.model.Request
 import dagger.Binds
 import dagger.Module

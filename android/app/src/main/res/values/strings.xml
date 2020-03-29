@@ -17,4 +17,8 @@
     <string name="signup_country">Country</string>
     <string name="signup_zip">Zip</string>
     <string name="signup_btn">Save</string>
+    <string name="sending">Sending: </string>
+    <string name="your_info">Your info</string>
+    <string name="submit">Submit</string>
+    <string name="error_quantity_overflown">The quantity you set can\'t be higher then the number of items requested</string>
 </resources>

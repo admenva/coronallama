@@ -6,5 +6,5 @@ enum class UserType {
 
 sealed class User {
     data class Institution(val name: String, val address: String)
-    data class Volunteer(val name: String, val lastName: String)
+    data class Volunteer(val firstName: String, val lastName: String, val contact: String, val address: String)
 }
