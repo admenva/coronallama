@@ -4,8 +4,11 @@ import android.view.View
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.navigation.findNavController
 import com.squareup.picasso.Picasso
 import com.threed.printmatcher.fragment.di.FragmentScope
+import com.threed.printmatcher.fragment.request.confirmation.RequestConfirmationFragmentDirections
+import com.threed.printmatcher.model.Submission
 import kotlinx.android.synthetic.main.fragment_request_confirmation.view.*
 import javax.inject.Inject
 
@@ -15,6 +18,7 @@ class RequestConfirmationView @Inject constructor(
     private val presenter: RequestConfirmationContract.Presenter
 ) : RequestConfirmationContract.View {
 
+    private lateinit var pageLayout: View
     private lateinit var image: ImageView
     private lateinit var titleTv: TextView
     private lateinit var quantity: TextView
@@ -25,6 +29,7 @@ class RequestConfirmationView @Inject constructor(
     private lateinit var submitBtn: Button
 
     override fun bind(pageLayout: View) {
+        this.pageLayout = pageLayout
         image = pageLayout.image
         titleTv = pageLayout.title
         quantity = pageLayout.quantity
@@ -63,6 +68,12 @@ class RequestConfirmationView @Inject constructor(
 
     override fun fillCommittedQuantity(committedQuantity: Int) {
         quantity.text = committedQuantity.toString()
+    }
+
+    override fun navigateToSubmissionsListPage(submission: Submission) {
+        pageLayout.findNavController().navigate(
+            RequestConfirmationFragmentDirections.volunteerConfirmationToSubmissions(submission)
+        )
     }
 
     private fun setupSubmitBtn() {

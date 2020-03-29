@@ -2,7 +2,6 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/nav_auth"
     app:startDestination="@id/start_fragment">
 
     <fragment
@@ -32,10 +31,7 @@
 
         <action
             android:id="@+id/login_to_volunteer_home"
-            app:destination="@id/home_fragment"
-            app:launchSingleTop="true"
-            app:popUpTo="@+id/nav_auth"
-            app:popUpToInclusive="true"
+            app:destination="@id/volunteer_home_fragment"
             app:enterAnim="@anim/slide_in_right"
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_left"
@@ -56,10 +52,22 @@
 
         <action
             android:id="@+id/signup_to_volunteer_home"
-            app:destination="@id/home_fragment"
-            app:launchSingleTop="true"
-            app:popUpTo="@+id/nav_auth"
-            app:popUpToInclusive="true"
+            app:destination="@id/volunteer_home_fragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/volunteer_home_fragment"
+        android:name="com.threed.printmatcher.fragment.home.VolunteerHomeFragment"
+        tools:layout="@layout/fragment_volunteer_home">
+
+        <action
+            android:id="@+id/volunteer_home_to_request"
+            app:destination="@id/request_detail_fragment"
             app:enterAnim="@anim/slide_in_right"
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_left"
@@ -67,8 +75,50 @@
     </fragment>
 
     <fragment
-        android:id="@+id/home_fragment"
-        android:name="com.threed.printmatcher.fragment.home.VolunteerMainFragment"
-        tools:layout="@layout/fragment_volunteer_main">
+        android:id="@+id/request_detail_fragment"
+        android:name="com.threed.printmatcher.fragment.request.details.RequestDetailsFragment"
+        tools:layout="@layout/fragment_request_details">
+
+        <action
+            android:id="@+id/request_details_to_confirmation"
+            app:destination="@id/request_confirmation_fragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+        <argument
+            android:name="request"
+            app:argType="com.threed.printmatcher.model.Request" />
+
     </fragment>
+
+    <fragment
+        android:id="@+id/request_confirmation_fragment"
+        android:name="com.threed.printmatcher.fragment.request.confirmation.RequestConfirmationFragment"
+        tools:layout="@layout/fragment_request_confirmation">
+
+        <action
+            android:id="@+id/volunteer_confirmation_to_submissions"
+            app:destination="@id/volunteer_submissions_fragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+        <argument
+            android:name="submission"
+            app:argType="com.threed.printmatcher.model.Submission" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/volunteer_submissions_fragment"
+        android:name="com.threed.printmatcher.fragment.submissions.SubmissionsFragment"
+        tools:layout="@layout/fragment_volunteer_submissions">
+
+        <argument
+            android:name="submission"
+            app:argType="com.threed.printmatcher.model.Submission" />
+    </fragment>
+
 </navigation>

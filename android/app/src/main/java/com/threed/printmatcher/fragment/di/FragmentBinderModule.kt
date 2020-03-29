@@ -14,6 +14,8 @@ import com.threed.printmatcher.fragment.request.details.RequestDetailsFragment
 import com.threed.printmatcher.fragment.request.details.di.RequestDetailsModule
 import com.threed.printmatcher.fragment.signup.SignUpFragment
 import com.threed.printmatcher.fragment.signup.di.SignupFragmentModule
+import com.threed.printmatcher.fragment.submissions.SubmissionsFragment
+import com.threed.printmatcher.fragment.submissions.di.SubmissionsModule
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
 
@@ -47,4 +49,8 @@ abstract class FragmentBinderModule {
     @ContributesAndroidInjector(modules = [VolunteerMainModule::class])
     @FragmentScope
     abstract fun provideVolunteerMainFragment(): VolunteerMainFragment
+
+    @ContributesAndroidInjector(modules = [SubmissionsModule::class])
+    @FragmentScope
+    abstract fun provideSubmissionsFragment(): SubmissionsFragment
 }
