@@ -11,7 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="80dp" />
+        app:layout_constraintGuide_begin="@dimen/guide_96" />
 
     <ImageView
         android:id="@+id/logo"
@@ -37,9 +37,10 @@
 
     <Button
         android:id="@+id/institution"
-        style="@style/AppTheme.PrimaryBtn"
+        style="@style/AppTheme.Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:minWidth="180dp"
         android:layout_marginTop="@dimen/_48"
         android:text="@string/institution"
         app:layout_constraintEnd_toEndOf="parent"
@@ -48,10 +49,10 @@
 
     <Button
         android:id="@+id/volunteer"
-        style="@style/AppTheme.PrimaryBtn"
+        style="@style/AppTheme.Button"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_24"
+        android:layout_marginTop="@dimen/_16"
         android:text="@string/volunteer"
         app:layout_constraintEnd_toEndOf="@id/institution"
         app:layout_constraintStart_toStartOf="@id/institution"
