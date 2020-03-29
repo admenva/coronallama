@@ -8,7 +8,7 @@ import android.widget.TextView
 import androidx.navigation.findNavController
 import com.squareup.picasso.Picasso
 import com.threed.printmatcher.fragment.di.FragmentScope
-import com.threed.printmatcher.fragment.request.details.RequestDetailsFragmentDirections
+import com.threed.printmatcher.fragment.volunteer.request.details.RequestDetailsFragmentDirections
 import com.threed.printmatcher.model.Submission
 import kotlinx.android.synthetic.main.fragment_request_details.view.*
 import javax.inject.Inject
