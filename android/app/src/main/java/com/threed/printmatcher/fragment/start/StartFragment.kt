@@ -1,4 +1,4 @@
-package com.threed.printmatcher.fragment.main
+package com.threed.printmatcher.fragment.start
 
 import android.os.Bundle
 import android.view.LayoutInflater

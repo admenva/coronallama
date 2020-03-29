@@ -72,7 +72,7 @@ class RequestConfirmationView @Inject constructor(
 
     override fun navigateToSubmissionsListPage(submission: Submission) {
         pageLayout.findNavController().navigate(
-            RequestConfirmationFragmentDirections.volunteerConfirmationToSubmissions(submission)
+            RequestConfirmationFragmentDirections.confirmationToSubmissions(submission)
         )
     }
 

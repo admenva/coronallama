@@ -71,7 +71,7 @@ class VolunteerHomeView @Inject constructor(
     }
 
     override fun navigateToRequestDetail(item: Request) {
-        pageView.findNavController().navigate(VolunteerHomeFragmentDirections.volunteerHomeToRequest(item))
+        pageView.findNavController().navigate(VolunteerHomeFragmentDirections.homeToRequest(item))
     }
 
     override fun showSearchResultsList() {

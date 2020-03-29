@@ -6,7 +6,7 @@
 
     <fragment
         android:id="@+id/start_fragment"
-        android:name="com.threed.printmatcher.fragment.main.StartFragment"
+        android:name="com.threed.printmatcher.fragment.start.StartFragment"
         tools:layout="@layout/fragment_start">
         <action
             android:id="@+id/start_to_login"
@@ -21,6 +21,11 @@
         android:id="@+id/login_fragment"
         android:name="com.threed.printmatcher.fragment.login.LoginFragment"
         tools:layout="@layout/fragment_login">
+
+        <argument
+            android:name="userId"
+            app:argType="com.threed.printmatcher.model.UserType" />
+
         <action
             android:id="@+id/login_to_signup"
             app:destination="@id/signup_fragment"
@@ -30,100 +35,58 @@
             app:popExitAnim="@anim/slide_out_right" />
 
         <action
-            android:id="@+id/login_to_volunteer_home"
-            app:destination="@id/institution_requests_fragment"
+            android:id="@+id/login_to_volunteer"
+            app:destination="@id/volunteer_main_fragment"
             app:enterAnim="@anim/slide_in_right"
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_left"
             app:popExitAnim="@anim/slide_out_right" />
 
-        <argument
-            android:name="userId"
-            app:argType="com.threed.printmatcher.model.UserType" />
+        <action
+            android:id="@+id/login_to_institution"
+            app:destination="@id/institution_main_fragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
     </fragment>
 
     <fragment
         android:id="@+id/signup_fragment"
         android:name="com.threed.printmatcher.fragment.signup.SignUpFragment"
         tools:layout="@layout/fragment_signup">
+
         <argument
             android:name="userId"
             app:argType="com.threed.printmatcher.model.UserType" />
 
         <action
-            android:id="@+id/signup_to_volunteer_home"
-            app:destination="@id/volunteer_home_fragment"
+            android:id="@+id/signup_to_volunteer"
+            app:destination="@id/volunteer_main_fragment"
             app:enterAnim="@anim/slide_in_right"
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_left"
             app:popExitAnim="@anim/slide_out_right" />
-
-    </fragment>
-
-    <fragment
-        android:id="@+id/volunteer_home_fragment"
-        android:name="com.threed.printmatcher.fragment.volunteer.request.list.VolunteerHomeFragment"
-        tools:layout="@layout/fragment_volunteer_home">
 
         <action
-            android:id="@+id/volunteer_home_to_request"
-            app:destination="@id/request_detail_fragment"
-            app:enterAnim="@anim/slide_in_right"
-            app:exitAnim="@anim/slide_out_left"
-            app:popEnterAnim="@anim/slide_in_left"
-            app:popExitAnim="@anim/slide_out_right" />
-    </fragment>
-
-    <fragment
-        android:id="@+id/request_detail_fragment"
-        android:name="com.threed.printmatcher.fragment.volunteer.request.details.RequestDetailsFragment"
-        tools:layout="@layout/fragment_request_details">
-
-        <action
-            android:id="@+id/request_details_to_confirmation"
-            app:destination="@id/request_confirmation_fragment"
+            android:id="@+id/signup_to_institution"
+            app:destination="@id/volunteer_main_fragment"
             app:enterAnim="@anim/slide_in_right"
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_left"
             app:popExitAnim="@anim/slide_out_right" />
 
-        <argument
-            android:name="request"
-            app:argType="com.threed.printmatcher.model.Request" />
-
     </fragment>
 
     <fragment
-        android:id="@+id/request_confirmation_fragment"
-        android:name="com.threed.printmatcher.fragment.volunteer.request.confirmation.RequestConfirmationFragment"
-        tools:layout="@layout/fragment_request_confirmation">
-
-        <action
-            android:id="@+id/volunteer_confirmation_to_submissions"
-            app:destination="@id/volunteer_submissions_fragment"
-            app:enterAnim="@anim/slide_in_right"
-            app:exitAnim="@anim/slide_out_left"
-            app:popEnterAnim="@anim/slide_in_left"
-            app:popExitAnim="@anim/slide_out_right" />
-
-        <argument
-            android:name="submission"
-            app:argType="com.threed.printmatcher.model.Submission" />
-    </fragment>
+        android:id="@+id/volunteer_main_fragment"
+        android:name="com.threed.printmatcher.fragment.volunteer.main.VolunteerMainFragment"
+        tools:layout="@layout/fragment_volunteer_main" />
 
     <fragment
-        android:id="@+id/volunteer_submissions_fragment"
-        android:name="com.threed.printmatcher.fragment.volunteer.submissions.VolunteerSubmissionsFragment"
-        tools:layout="@layout/fragment_volunteer_submissions">
-
-        <argument
-            android:name="submission"
-            app:argType="com.threed.printmatcher.model.Submission" />
-    </fragment>
-
-    <fragment
-        android:id="@+id/institution_requests_fragment"
-        android:name="com.threed.printmatcher.fragment.institution.requests.InstitutionRequestsFragment"
-        tools:layout="@layout/fragment_institution_requests" />
+        android:id="@+id/institution_main_fragment"
+        android:name="com.threed.printmatcher.fragment.institution.main.InstitutionMainFragment"
+        tools:layout="@layout/fragment_institution_main" />
 
 </navigation>
