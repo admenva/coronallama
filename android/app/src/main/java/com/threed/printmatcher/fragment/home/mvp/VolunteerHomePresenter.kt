@@ -47,6 +47,7 @@ class VolunteerHomePresenter @Inject constructor(private val toastManager: Toast
     }
 
     override fun onRequestItemClicked(item: Request) {
+        //TODO Open RequestDetailsFragment with the Request added to the arguments as Serializable (with tag "request")
         toastManager.show("${item.title} clicked")
     }
 
