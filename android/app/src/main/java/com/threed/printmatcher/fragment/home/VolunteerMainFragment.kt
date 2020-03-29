@@ -24,7 +24,7 @@ class VolunteerMainFragment : DaggerFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        appViewModel.setUser(Volunteer("Mariana", "Ardoino"))
+        appViewModel.setUser(Volunteer("Mariana", "Ardoino", "", ""))
     }
 }
 

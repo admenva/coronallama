@@ -21,14 +21,12 @@
 
     <fragment
         android:id="@+id/request_detail_fragment"
-        android:name="com.threed.printmatcher.fragment.requestdetails.RequestDetailsFragment"
+        android:name="com.threed.printmatcher.fragment.request.details.RequestDetailsFragment"
         tools:layout="@layout/fragment_request_details">
 
         <argument
             android:name="request"
             app:argType="com.threed.printmatcher.model.Request" />
-
-
     </fragment>
 
     <fragment

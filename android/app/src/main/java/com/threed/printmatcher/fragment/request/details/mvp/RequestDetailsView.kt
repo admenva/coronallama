@@ -8,7 +8,6 @@ import android.widget.TextView
 import androidx.navigation.findNavController
 import com.squareup.picasso.Picasso
 import com.threed.printmatcher.fragment.di.FragmentScope
-import com.threed.printmatcher.fragment.request.details.RequestDetailsFragmentDirections
 import com.threed.printmatcher.model.Request
 import kotlinx.android.synthetic.main.fragment_request_details.view.*
 import javax.inject.Inject
@@ -79,11 +78,12 @@ class RequestDetailsView @Inject constructor(
     }
 
     override fun navigateToRequestConfirmation(request: Request, committedQuantity: Int) {
-        pageLayout.findNavController().navigate(
-            RequestDetailsFragmentDirections.volunteerRequestToConfirmation(
-                request, committedQuantity
-            )
-        )
+        //TODO(fix)
+//        pageLayout.findNavController().navigate(
+//            RequestDetailsFragmentDirections.volunteerRequestToConfirmation(
+//                request, committedQuantity
+//            )
+//        )
     }
 
     private fun setupTextBox() {
