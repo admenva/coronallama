@@ -1,7 +1,7 @@
 package com.threed.printmatcher.fragment.institution.requests.mvp
 
 import com.threed.printmatcher.fragment.di.FragmentScope
-import com.threed.printmatcher.model.Submission
+import com.threed.printmatcher.model.Request
 import javax.inject.Inject
 
 @FragmentScope
@@ -14,7 +14,11 @@ class InstitutionRequestsPresenter @Inject constructor() :
         mView = view
     }
 
-    override fun onSubmissionItemClicked(item: Submission) {
-        mView.navigateToSubmissionDetails(item)
+    override fun onRequestItemClicked(item: Request) {
+        //TODO mView.navigateToRequestDetails(item)
+    }
+
+    override fun onAddRequestButtonClicked() {
+        //TODO mView.navigateToAddRequestPage(item)
     }
 }

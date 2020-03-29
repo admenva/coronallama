@@ -22,7 +22,7 @@ class InstitutionRequestsFragment : DaggerFragment() {
         savedInstanceState: Bundle?
     ): View? {
         val pageLayout =
-            inflater.inflate(R.layout.fragment_institution_submissions, container, false)
+            inflater.inflate(R.layout.fragment_institution_requests, container, false)
         mView.bind(pageLayout)
         mPresenter.onViewAvailable(mView)
         return pageLayout

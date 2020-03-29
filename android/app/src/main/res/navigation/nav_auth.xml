@@ -31,7 +31,7 @@
 
         <action
             android:id="@+id/login_to_volunteer_home"
-            app:destination="@id/volunteer_home_fragment"
+            app:destination="@id/institution_requests_fragment"
             app:enterAnim="@anim/slide_in_right"
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_left"
@@ -122,8 +122,8 @@
     </fragment>
 
     <fragment
-        android:id="@+id/institution_submissions_fragment"
-        android:name="com.threed.printmatcher.fragment.submissions.institution.InstitutionSubmissionsFragment"
-        tools:layout="@layout/fragment_institution_submissions" />
+        android:id="@+id/institution_requests_fragment"
+        android:name="com.threed.printmatcher.fragment.institution.requests.InstitutionRequestsFragment"
+        tools:layout="@layout/fragment_institution_requests" />
 
 </navigation>

@@ -1,8 +1,10 @@
 package com.threed.printmatcher.model
 
+import com.threed.printmatcher.app.di.ApplicationScope
 import com.threed.printmatcher.util.DateCreator
 import javax.inject.Inject
 
+@ApplicationScope
 class MockedSubmissionList @Inject constructor(dateCreator: DateCreator) {
 
     private val items: MutableList<Submission> = mutableListOf()

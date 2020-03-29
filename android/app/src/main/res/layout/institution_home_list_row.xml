@@ -1,6 +1,7 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/root"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -36,26 +37,32 @@
                 android:id="@+id/title_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
                 android:textAllCaps="true"
+                android:textSize="12sp"
                 android:textStyle="bold"
-                android:layout_marginBottom="8dp"
-                android:textSize="12sp" />
+                tools:text="TITle" />
 
             <TextView
-                android:id="@+id/status_tv"
+                android:id="@+id/requested_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:textSize="12sp" />
+                android:textSize="12sp"
+                tools:text="Requested: 1000" />
 
             <TextView
-                android:id="@+id/location_tv"
+                android:id="@+id/pending_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:drawableLeft="@drawable/marker"
-                android:ellipsize="end"
-                android:maxLines="2"
-                android:textSize="12sp" />
+                android:textSize="12sp"
+                tools:text="Pending/Completed: 700" />
+
+            <TextView
+                android:id="@+id/still_needs_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                tools:text="Needs: 300" />
 
         </LinearLayout>
     </LinearLayout>

@@ -1,12 +1,14 @@
 package com.threed.printmatcher.fragment.institution.requests.mvp
 
+import com.threed.printmatcher.model.Request
 import com.threed.printmatcher.model.Submission
 
 interface InstitutionRequestsContract {
 
     interface Presenter {
         fun onViewAvailable(view: View)
-        fun onSubmissionItemClicked(item: Submission)
+        fun onRequestItemClicked(item: Request)
+        fun onAddRequestButtonClicked()
     }
 
     interface View {
@@ -15,7 +17,7 @@ interface InstitutionRequestsContract {
     }
 
     interface Model {
-        fun getItemAt(position: Int): Submission
+        fun getItemAt(position: Int): Request
         fun getItemCount(): Int
     }
 }
