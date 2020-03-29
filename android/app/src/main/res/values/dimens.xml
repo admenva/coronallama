@@ -5,4 +5,6 @@
     <dimen name="_24">24dp</dimen>
     <dimen name="_32">32dp</dimen>
     <dimen name="_48">48dp</dimen>
+    <dimen name="guide_32">32dp</dimen>
+    <dimen name="guide_96">96dp</dimen>
 </resources>

@@ -6,4 +6,15 @@
     <string name="need">Need: </string>
     <string name="my_capability">I can make this many: </string>
     <string name="ok">Ok</string>
+    <string name="login_sign_up">New to 3DSupply? Sign up</string>
+    <string name="login_header">Login</string>
+    <string name="login_email">Email</string>
+    <string name="login_password">Password</string>
+    <string name="login_btn">Submit</string>
+    <string name="signup_name">Name</string>
+    <string name="signup_lastname">Last Name</string>
+    <string name="signup_address">Address</string>
+    <string name="signup_country">Country</string>
+    <string name="signup_zip">Zip</string>
+    <string name="signup_btn">Save</string>
 </resources>

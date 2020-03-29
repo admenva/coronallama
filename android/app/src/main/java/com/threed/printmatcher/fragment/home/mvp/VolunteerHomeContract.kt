@@ -23,6 +23,7 @@ interface VolunteerHomeContract {
         fun hideSearchResults()
         fun hideCurrentLocationRow()
         fun setSearchText(query: String)
+        fun navigateToRequestDetail(item: Request)
     }
 
     interface Model {

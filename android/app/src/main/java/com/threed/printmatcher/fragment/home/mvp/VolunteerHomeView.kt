@@ -3,11 +3,14 @@ package com.threed.printmatcher.fragment.home.mvp
 import android.view.View
 import android.widget.EditText
 import android.widget.TextView
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.threed.printmatcher.fragment.di.FragmentScope
+import com.threed.printmatcher.fragment.home.VolunteerHomeFragmentDirections
 import com.threed.printmatcher.fragment.home.VolunteerHomeSearchBoxTextWatcher
 import com.threed.printmatcher.fragment.home.adapter.VolunteerHomeListAdapter
+import com.threed.printmatcher.model.Request
 import kotlinx.android.synthetic.main.fragment_volunteer_home.view.*
 import kotlinx.android.synthetic.main.search_box_component.view.*
 import javax.inject.Inject
@@ -27,6 +30,7 @@ class VolunteerHomeView @Inject constructor(
     private lateinit var mockAutosuggestResult1Tv: TextView
     private lateinit var mockAutosuggestResult2Tv: TextView
     private lateinit var mockAutosuggestResult3Tv: TextView
+    private lateinit var pageView: View
 
     override fun bind(pageView: View) {
         recyclerView = pageView.recycler_view
@@ -39,6 +43,7 @@ class VolunteerHomeView @Inject constructor(
         initSearchBox()
         initMockedAutosuggestRows()
         initRecyclerView()
+        this.pageView = pageView
     }
 
     override fun getSearchQuery(): String {
@@ -63,6 +68,10 @@ class VolunteerHomeView @Inject constructor(
 
     override fun setSearchText(query: String) {
         searchBox.setText(query)
+    }
+
+    override fun navigateToRequestDetail(item: Request) {
+        pageView.findNavController().navigate(VolunteerHomeFragmentDirections.volunteerHomeToRequest(item))
     }
 
     override fun showSearchResultsList() {
