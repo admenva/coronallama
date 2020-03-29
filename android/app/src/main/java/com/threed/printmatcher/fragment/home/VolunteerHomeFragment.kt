@@ -16,7 +16,11 @@ class VolunteerHomeFragment : DaggerFragment() {
     @Inject
     lateinit var mView: VolunteerHomeContract.View
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
         val pageLayout = inflater.inflate(R.layout.fragment_volunteer_home, container, false)
         mView.bind(pageLayout)
         mPresenter.onViewAvailable(mView)

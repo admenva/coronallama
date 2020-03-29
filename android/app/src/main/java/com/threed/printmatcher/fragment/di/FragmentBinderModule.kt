@@ -1,7 +1,9 @@
 package com.threed.printmatcher.fragment.di
 
 import com.threed.printmatcher.fragment.home.VolunteerHomeFragment
+import com.threed.printmatcher.fragment.home.VolunteerMainFragment
 import com.threed.printmatcher.fragment.home.di.VolunteerHomeModule
+import com.threed.printmatcher.fragment.home.di.VolunteerMainModule
 import com.threed.printmatcher.fragment.login.LoginFragment
 import com.threed.printmatcher.fragment.login.di.LoginFragmentModule
 import com.threed.printmatcher.fragment.main.StartFragment
@@ -41,4 +43,8 @@ abstract class FragmentBinderModule {
     @ContributesAndroidInjector(modules = [RequestConfirmationModule::class])
     @FragmentScope
     abstract fun provideRequestConfirmationFragment(): RequestConfirmationFragment
+
+    @ContributesAndroidInjector(modules = [VolunteerMainModule::class])
+    @FragmentScope
+    abstract fun provideVolunteerMainFragment(): VolunteerMainFragment
 }

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/volunteer_home_fragment"
+    android:id="@+id/nav_volunteer">
+
+    <fragment
+        android:id="@+id/volunteer_home_fragment"
+        android:name="com.threed.printmatcher.fragment.home.VolunteerHomeFragment"
+        tools:layout="@layout/fragment_volunteer_main">
+    <action
+        android:id="@+id/volunteer_home_to_request"
+        app:destination="@id/request_detail_fragment"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/request_detail_fragment"
+        android:name="com.threed.printmatcher.fragment.request.details.RequestDetailsFragment"
+        tools:layout="@layout/fragment_request_details">
+
+        <argument
+            android:name="request"
+            app:argType="com.threed.printmatcher.model.Request" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/request_confirmation_fragment"
+        android:name="com.threed.printmatcher.fragment.request.confirmation.RequestConfirmationFragment"
+        tools:layout="@layout/fragment_request_confirmation">
+
+        <argument
+            android:name="request"
+            app:argType="com.threed.printmatcher.model.Request" />
+
+        <argument
+            android:name="committedQuantity"
+            app:argType="integer" />
+
+    </fragment>
+
+</navigation>
