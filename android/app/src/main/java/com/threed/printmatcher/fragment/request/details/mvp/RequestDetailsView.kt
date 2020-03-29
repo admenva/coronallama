@@ -30,8 +30,8 @@ class RequestDetailsView @Inject constructor(
     private lateinit var mapImage: ImageView
     private lateinit var minus: ImageView
     private lateinit var committedQuantity: EditText
-    private lateinit var plus: ImageView
     private lateinit var okBtn: Button
+    private lateinit var plus: ImageView
 
     override fun bind(pageLayout: View) {
         image = pageLayout.image
