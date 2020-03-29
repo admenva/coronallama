@@ -8,9 +8,9 @@ import android.widget.Button
 import androidx.core.view.ViewCompat.requireViewById
 import androidx.navigation.findNavController
 import com.threed.printmatcher.R
-import com.threed.printmatcher.fragment.types.UserType
-import com.threed.printmatcher.fragment.types.UserType.INSTITUTION
-import com.threed.printmatcher.fragment.types.UserType.VOLUNTEER
+import com.threed.printmatcher.model.UserType
+import com.threed.printmatcher.model.UserType.INSTITUTION
+import com.threed.printmatcher.model.UserType.VOLUNTEER
 import dagger.android.support.DaggerFragment
 
 class StartFragment : DaggerFragment() {

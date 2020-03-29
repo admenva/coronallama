@@ -1,4 +1,4 @@
-package com.threed.printmatcher.fragment.types
+package com.threed.printmatcher.model
 
 enum class UserType {
     INSTITUTION, VOLUNTEER
