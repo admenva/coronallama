@@ -1,23 +1,23 @@
 package com.threed.printmatcher.fragment.di
 
-import com.threed.printmatcher.fragment.home.VolunteerHomeFragment
 import com.threed.printmatcher.fragment.home.VolunteerMainFragment
-import com.threed.printmatcher.fragment.home.di.VolunteerHomeModule
 import com.threed.printmatcher.fragment.home.di.VolunteerMainModule
+import com.threed.printmatcher.fragment.institution.requests.InstitutionRequestsFragment
 import com.threed.printmatcher.fragment.login.LoginFragment
 import com.threed.printmatcher.fragment.login.di.LoginFragmentModule
 import com.threed.printmatcher.fragment.main.StartFragment
 import com.threed.printmatcher.fragment.main.di.StartFragmentModule
-import com.threed.printmatcher.fragment.request.confirmation.RequestConfirmationFragment
-import com.threed.printmatcher.fragment.request.confirmation.di.RequestConfirmationModule
-import com.threed.printmatcher.fragment.request.details.RequestDetailsFragment
-import com.threed.printmatcher.fragment.request.details.di.RequestDetailsModule
+import com.threed.printmatcher.fragment.volunteer.request.confirmation.RequestConfirmationFragment
+import com.threed.printmatcher.fragment.volunteer.request.confirmation.di.RequestConfirmationModule
+import com.threed.printmatcher.fragment.volunteer.request.details.RequestDetailsFragment
+import com.threed.printmatcher.fragment.volunteer.request.details.di.RequestDetailsModule
 import com.threed.printmatcher.fragment.signup.SignUpFragment
 import com.threed.printmatcher.fragment.signup.di.SignupFragmentModule
-import com.threed.printmatcher.fragment.submissions.institution.InstitutionSubmissionsFragment
-import com.threed.printmatcher.fragment.submissions.institution.di.InstitutionSubmissionsModule
-import com.threed.printmatcher.fragment.submissions.volunteer.VolunteerSubmissionsFragment
-import com.threed.printmatcher.fragment.submissions.volunteer.di.VolunteerSubmissionsModule
+import com.threed.printmatcher.fragment.institution.requests.di.InstitutionRequestsModule
+import com.threed.printmatcher.fragment.volunteer.request.list.VolunteerHomeFragment
+import com.threed.printmatcher.fragment.volunteer.request.list.di.VolunteerHomeModule
+import com.threed.printmatcher.fragment.volunteer.submissions.VolunteerSubmissionsFragment
+import com.threed.printmatcher.fragment.volunteer.submissions.di.VolunteerSubmissionsModule
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
 
@@ -56,7 +56,7 @@ abstract class FragmentBinderModule {
     @FragmentScope
     abstract fun provideVolunteerSubmissionsFragment(): VolunteerSubmissionsFragment
 
-    @ContributesAndroidInjector(modules = [InstitutionSubmissionsModule::class])
+    @ContributesAndroidInjector(modules = [InstitutionRequestsModule::class])
     @FragmentScope
-    abstract fun provideInstitutionSubmissionsFragment(): InstitutionSubmissionsFragment
+    abstract fun provideInstitutionRequestsFragment(): InstitutionRequestsFragment
 }

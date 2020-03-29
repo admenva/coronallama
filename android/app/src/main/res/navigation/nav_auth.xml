@@ -62,7 +62,7 @@
 
     <fragment
         android:id="@+id/volunteer_home_fragment"
-        android:name="com.threed.printmatcher.fragment.home.VolunteerHomeFragment"
+        android:name="com.threed.printmatcher.fragment.volunteer.request.list.VolunteerHomeFragment"
         tools:layout="@layout/fragment_volunteer_home">
 
         <action
@@ -76,7 +76,7 @@
 
     <fragment
         android:id="@+id/request_detail_fragment"
-        android:name="com.threed.printmatcher.fragment.request.details.RequestDetailsFragment"
+        android:name="com.threed.printmatcher.fragment.volunteer.request.details.RequestDetailsFragment"
         tools:layout="@layout/fragment_request_details">
 
         <action
@@ -95,7 +95,7 @@
 
     <fragment
         android:id="@+id/request_confirmation_fragment"
-        android:name="com.threed.printmatcher.fragment.request.confirmation.RequestConfirmationFragment"
+        android:name="com.threed.printmatcher.fragment.volunteer.request.confirmation.RequestConfirmationFragment"
         tools:layout="@layout/fragment_request_confirmation">
 
         <action
@@ -113,7 +113,7 @@
 
     <fragment
         android:id="@+id/volunteer_submissions_fragment"
-        android:name="com.threed.printmatcher.fragment.submissions.volunteer.VolunteerSubmissionsFragment"
+        android:name="com.threed.printmatcher.fragment.volunteer.submissions.VolunteerSubmissionsFragment"
         tools:layout="@layout/fragment_volunteer_submissions">
 
         <argument
