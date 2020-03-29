@@ -1,12 +1,11 @@
-package com.threed.printmatcher.fragment.requestdetails
+package com.threed.printmatcher.fragment.request.details
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.threed.printmatcher.R
-import com.threed.printmatcher.fragment.home.mvp.VolunteerHomeContract
-import com.threed.printmatcher.fragment.requestdetails.mvp.RequestDetailsContract
+import com.threed.printmatcher.fragment.request.details.mvp.RequestDetailsContract
 import dagger.android.support.DaggerFragment
 import javax.inject.Inject
 

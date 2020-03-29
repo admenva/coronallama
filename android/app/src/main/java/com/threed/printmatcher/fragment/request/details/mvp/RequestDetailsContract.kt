@@ -1,12 +1,13 @@
-package com.threed.printmatcher.fragment.requestdetails.mvp
+package com.threed.printmatcher.fragment.request.details.mvp
 
-import android.view.View
+import com.threed.printmatcher.model.Request
 
 interface RequestDetailsContract {
 
     interface Presenter {
         fun onViewAvailable(mView: View)
         fun onResume()
+        fun onOkButtonClicked(committedQuantity: Int)
     }
 
     interface View {
@@ -17,6 +18,7 @@ interface RequestDetailsContract {
         fun showNeeds(needs: Int)
         fun showLocation(location: String)
         fun showMapImage()
-        fun setupCommitedQuantitySection(needs: Int)
+        fun setupCommittedQuantitySection()
+        fun navigateToRequestConfirmation(request: Request, committedQuantity: Int)
     }
 }

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/_16">
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="200dp"
+            android:layout_height="100dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/image"
+            android:paddingTop="@dimen/_16"
+            android:textAllCaps="true"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            tools:text="Headline" />
+
+        <LinearLayout
+            android:id="@+id/quantity_holder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title"
+            android:layout_alignParentStart="true"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/_16">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_16"
+                android:text="@string/sending"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/quantity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/holo_red_dark"
+                tools:text="100" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/quantity_holder"
+            android:layout_alignParentStart="true"
+            android:drawableStart="@drawable/marker"
+            tools:text="Location" />
+
+        <TextView
+            android:id="@+id/your_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/location"
+            android:layout_marginTop="120dp"
+            android:text="@string/your_info"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/your_info"
+            android:paddingTop="@dimen/_16"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            tools:text="Name" />
+
+        <TextView
+            android:id="@+id/contact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/name"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            tools:text="Contact" />
+
+        <TextView
+            android:id="@+id/user_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/contact"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            tools:text="Location" />
+
+        <Button
+            android:id="@+id/submit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/user_location"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_16"
+            android:background="@android:color/holo_red_dark"
+            android:padding="@dimen/_16"
+            android:text="@string/ok"
+            android:textAllCaps="true"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+</ScrollView>

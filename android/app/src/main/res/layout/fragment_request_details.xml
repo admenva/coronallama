@@ -119,7 +119,7 @@
 
         <Button
             android:id="@+id/ok"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/commited_quantity_holder"
             android:layout_centerHorizontal="true"
