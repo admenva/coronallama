@@ -19,7 +19,7 @@
         android:layout_height="match_parent"
         android:layout_gravity="start"
         android:fitsSystemWindows="true"
-        app:headerLayout="@layout/drawer_header_volunteer"
-        app:menu="@menu/volunteer_drawer" />
+        app:headerLayout="@layout/drawer_header"
+        app:menu="@menu/drawer_institution" />
 
 </androidx.drawerlayout.widget.DrawerLayout>

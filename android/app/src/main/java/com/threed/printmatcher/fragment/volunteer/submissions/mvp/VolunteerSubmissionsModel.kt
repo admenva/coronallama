@@ -7,15 +7,13 @@ import javax.inject.Inject
 
 @FragmentScope
 class VolunteerSubmissionsModel @Inject constructor(
-    mockedSubmissions: MockedSubmissionList,
-    submissionFromPreviousPage: Submission
+    mockedSubmissions: MockedSubmissionList
 ) :
     VolunteerSubmissionsContract.Model {
 
     private val submissions: MutableList<Submission> = mutableListOf()
 
     init {
-        submissions.add(submissionFromPreviousPage)
         submissions.addAll(mockedSubmissions.getSubmissionsList())
     }
 

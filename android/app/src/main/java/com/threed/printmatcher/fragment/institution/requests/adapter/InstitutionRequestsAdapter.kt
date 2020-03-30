@@ -27,7 +27,7 @@ class InstitutionRequestsAdapter @Inject constructor(
         return if (viewType == VIEW_TYPE_NORMAL) {
             InstitutionRequestsViewHolder(
                 LayoutInflater.from(parent.context).inflate(
-                    R.layout.institution_home_list_row,
+                    R.layout.row_institution_home,
                     parent,
                     false
                 )

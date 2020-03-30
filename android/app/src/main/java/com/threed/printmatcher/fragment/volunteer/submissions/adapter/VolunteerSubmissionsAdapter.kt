@@ -17,7 +17,7 @@ class VolunteerSubmissionsAdapter @Inject constructor(
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): VolunteerSubmissionsViewHolder {
         return VolunteerSubmissionsViewHolder(
             LayoutInflater.from(parent.context).inflate(
-                R.layout.submissions_list_row,
+                R.layout.row_submissions,
                 parent,
                 false
             )

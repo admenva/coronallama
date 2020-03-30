@@ -8,7 +8,6 @@ import androidx.navigation.findNavController
 import com.squareup.picasso.Picasso
 import com.threed.printmatcher.fragment.di.FragmentScope
 import com.threed.printmatcher.fragment.volunteer.request.confirmation.RequestConfirmationFragmentDirections
-import com.threed.printmatcher.model.Submission
 import kotlinx.android.synthetic.main.fragment_request_confirmation.view.*
 import javax.inject.Inject
 
@@ -21,6 +20,7 @@ class RequestConfirmationView @Inject constructor(
     private lateinit var pageLayout: View
     private lateinit var image: ImageView
     private lateinit var titleTv: TextView
+    private lateinit var subtitleTv: TextView
     private lateinit var quantity: TextView
     private lateinit var locationTv: TextView
     private lateinit var nameTv: TextView
@@ -32,6 +32,7 @@ class RequestConfirmationView @Inject constructor(
         this.pageLayout = pageLayout
         image = pageLayout.image
         titleTv = pageLayout.title
+        subtitleTv = pageLayout.subtitle
         quantity = pageLayout.quantity
         locationTv = pageLayout.location
         nameTv = pageLayout.name
@@ -48,6 +49,10 @@ class RequestConfirmationView @Inject constructor(
 
     override fun fillTitle(title: String) {
         titleTv.text = title
+    }
+
+    override fun fillSubtitle(hospitalName: String) {
+        subtitleTv.text = hospitalName
     }
 
     override fun fillInstitutionAddress(location: String) {
@@ -70,9 +75,9 @@ class RequestConfirmationView @Inject constructor(
         quantity.text = committedQuantity.toString()
     }
 
-    override fun navigateToSubmissionsListPage(submission: Submission) {
+    override fun navigateToSubmissionsListPage() {
         pageLayout.findNavController().navigate(
-            RequestConfirmationFragmentDirections.confirmationToSubmissions(submission)
+            RequestConfirmationFragmentDirections.confirmationToSubmissions()
         )
     }
 

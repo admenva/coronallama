@@ -5,7 +5,7 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/volunteer_home_fragment"
-            android:title="@string/menu_home" />
+            android:id="@+id/institution_requests_fragment"
+            android:title="@string/menu_requests" />
     </group>
 </menu>

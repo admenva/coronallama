@@ -11,11 +11,11 @@ class MockedRequests @Inject constructor() {
     init {
         items.add(
             Request(
-                "masks",
-                "The Royal London Hospital",
-                "description",
-                "Whitechapel Rd, Whitechapel, London E1 1FR, United Kingdom",
-                "https://www.3dprintingmedia.network/wp-content/uploads/2020/03/despiece-en-plano-780x470.png",
+                "Protective Face Shields",
+                "The London Hospital",
+                "PPE is needed immediately to protect the caregivers who are risking their own health to care for patients in the most need",
+                "Whitechapel Rd, London, United Kingdom",
+                "https://cdn.prusa3d.com/wp-content/uploads/2020/03/shield-1.jpg#_ga=2.232288287.1611879560.1585533938-907588876.1585361799",
                 1000,
                 900
             )

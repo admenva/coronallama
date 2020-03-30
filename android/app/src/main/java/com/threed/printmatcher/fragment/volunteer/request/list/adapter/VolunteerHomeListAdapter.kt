@@ -19,7 +19,7 @@ class VolunteerHomeListAdapter @Inject constructor(
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): VolunteerHomeListViewHolder {
         return VolunteerHomeListViewHolder(
             LayoutInflater.from(parent.context).inflate(
-                R.layout.volunteer_home_list_row,
+                R.layout.row_volunteer_home,
                 parent,
                 false
             )

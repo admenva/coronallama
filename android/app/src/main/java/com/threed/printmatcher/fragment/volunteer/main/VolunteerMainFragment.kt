@@ -24,7 +24,14 @@ class VolunteerMainFragment : DaggerFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        appViewModel.setUser(Volunteer("Mariana", "Ardoino", "", ""))
+        appViewModel.setUser(
+            Volunteer(
+                "3D Shield Printer",
+                "Face Shield Printing",
+                "shield3D@gmail.com",
+                "1 Portland House, London, United Kingdom"
+            )
+        )
     }
 }
 

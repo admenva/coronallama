@@ -11,5 +11,5 @@ data class Submission constructor(
 ) : Serializable
 
 enum class State {
-    PENDING, SENT
+    PENDING, DELIVERED
 }

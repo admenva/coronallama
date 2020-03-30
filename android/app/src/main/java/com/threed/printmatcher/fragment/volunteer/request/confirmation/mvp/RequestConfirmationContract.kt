@@ -1,7 +1,5 @@
 package com.threed.printmatcher.fragment.volunteer.request.confirmation.mvp
 
-import com.threed.printmatcher.model.Submission
-
 interface RequestConfirmationContract {
 
     interface Presenter {
@@ -14,11 +12,12 @@ interface RequestConfirmationContract {
         fun bind(pageLayout: android.view.View)
         fun loadImage(imageResource: String)
         fun fillTitle(title: String)
+        fun fillSubtitle(hospitalName: String)
         fun fillInstitutionAddress(location: String)
         fun fillUserName(name: String)
         fun fillUserContact(contact: String)
         fun fillUserLocation(address: String)
         fun fillCommittedQuantity(committedQuantity: Int)
-        fun navigateToSubmissionsListPage(submission: Submission)
+        fun navigateToSubmissionsListPage()
     }
 }
