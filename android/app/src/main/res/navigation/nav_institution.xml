@@ -1,11 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/nav_institution">
+    android:id="@+id/nav_institution"
+    app:startDestination="@id/institution_requests_fragment">
 
     <fragment
         android:id="@+id/institution_requests_fragment"
         android:name="com.threed.printmatcher.fragment.institution.requests.InstitutionRequestsFragment"
+        android:label="@string/menu_requests"
         tools:layout="@layout/fragment_institution_requests" />
+
+    <fragment
+        android:id="@+id/institution_messages_fragment"
+        android:name="com.threed.printmatcher.fragment.messages.MessagesFragment"
+        android:label="@string/menu_messages"
+        tools:layout="@layout/fragment_messages" />
 
 </navigation>

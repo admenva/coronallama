@@ -23,7 +23,7 @@
         tools:layout="@layout/fragment_login">
 
         <argument
-            android:name="userId"
+            android:name="userType"
             app:argType="com.threed.printmatcher.model.UserType" />
 
         <action
