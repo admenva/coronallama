@@ -1,5 +1,7 @@
 package com.threed.printmatcher.fragment.di
 
+import com.threed.printmatcher.fragment.institution.create.NewRequestFragment
+import com.threed.printmatcher.fragment.institution.create.di.NewRequestModule
 import com.threed.printmatcher.fragment.institution.main.InstitutionMainFragment
 import com.threed.printmatcher.fragment.institution.main.di.InstitutionMainModule
 import com.threed.printmatcher.fragment.institution.requests.InstitutionRequestsFragment
@@ -71,4 +73,9 @@ abstract class FragmentBinderModule {
     @ContributesAndroidInjector(modules = [MessagesFragmentModule::class])
     @FragmentScope
     abstract fun provideMessagesFragment(): MessagesFragment
+
+    @ContributesAndroidInjector(modules = [NewRequestModule::class])
+    @FragmentScope
+    abstract fun provideCreateRequestFragment(): NewRequestFragment
+
 }

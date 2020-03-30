@@ -9,7 +9,37 @@
         android:id="@+id/institution_requests_fragment"
         android:name="com.threed.printmatcher.fragment.institution.requests.InstitutionRequestsFragment"
         android:label="@string/menu_requests"
-        tools:layout="@layout/fragment_institution_requests" />
+        tools:layout="@layout/fragment_institution_requests">
+
+        <argument
+            android:name="request"
+            app:argType="com.threed.printmatcher.model.Request" />
+        <action
+            android:id="@+id/requests_to_create_request"
+            app:destination="@id/institution_new_request_fragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+
+        </action>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/institution_new_request_fragment"
+        android:name="com.threed.printmatcher.fragment.institution.create.NewRequestFragment"
+        android:label="@string/menu_new_request"
+        tools:layout="@layout/fragment_new_request">
+        <action
+            android:id="@+id/new_request_to_requests"
+            app:destination="@id/institution_requests_fragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+
+    </fragment>
 
     <fragment
         android:id="@+id/institution_messages_fragment"

@@ -14,6 +14,7 @@ interface InstitutionRequestsContract {
     interface View {
         fun bind(pageLayout: android.view.View)
         fun navigateToSubmissionDetails(item: Submission)
+        fun navigateToCreateRequestPage()
     }
 
     interface Model {
