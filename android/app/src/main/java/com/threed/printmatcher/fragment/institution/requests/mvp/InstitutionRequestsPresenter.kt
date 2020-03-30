@@ -19,6 +19,6 @@ class InstitutionRequestsPresenter @Inject constructor() :
     }
 
     override fun onAddRequestButtonClicked() {
-        //TODO mView.navigateToAddRequestPage(item)
+        mView.navigateToCreateRequestPage()
     }
 }

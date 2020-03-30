@@ -8,6 +8,7 @@
     <string name="menu_requests">Requests</string>
     <string name="menu_messages">Messages</string>
     <string name="menu_confirmation">Confirmation</string>
+    <string name="menu_new_request">New Request</string>
 
     <string name="start_volunteer">Volunteer</string>
     <string name="start_institution">Institution</string>
@@ -25,6 +26,13 @@
     <string name="signup_country">Country</string>
     <string name="signup_zip">Zip</string>
     <string name="signup_btn">Sign In</string>
+
+    <string name="new_request_title">Title</string>
+    <string name="new_request_description">Description</string>
+    <string name="new_request_quantity">Amount</string>
+    <string name="new_request_address">Address</string>
+    <string name="new_request_btn">Create</string>
+    <string name="new_request_image">Attach Image</string>
 
     <string name="sending">Supplying with: </string>
     <string name="your_info">Your Info</string>

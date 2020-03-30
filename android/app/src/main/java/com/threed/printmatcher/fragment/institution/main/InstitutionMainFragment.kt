@@ -26,9 +26,9 @@ class InstitutionMainFragment : DaggerFragment() {
         super.onViewCreated(view, savedInstanceState)
         appViewModel.setUser(
             Institution(
-                "St Thomas' Hospital",
                 "#425678",
-                "stlondonhospital@gmail.com",
+                "St Thomas' Hospital",
+                "sthospital@gmail.com",
                 "Westminster Bridge Rd, London"
             )
         )
