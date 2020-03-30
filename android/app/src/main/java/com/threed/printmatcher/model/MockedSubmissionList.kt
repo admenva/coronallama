@@ -55,7 +55,7 @@ class MockedSubmissionList @Inject constructor(dateCreator: DateCreator) {
                     500,
                     120
                 ),
-                State.SENT,
+                State.DELIVERED,
                 200,
                 dateCreator.createDate(2020, 7, 15)
             )

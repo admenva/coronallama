@@ -1,35 +1,42 @@
 <resources>
     <string name="app_name">3DSupply</string>
-    <string name="volunteer">Volunteer</string>
-    <string name="institution">Institution</string>
-    <string name="start_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis purus sapien, elementum et fermentum sit amet, lacinia in mi. Nulla facilisi. Integer a lacus ac odio hendrerit sollicitudin.</string>
-    <string name="need">Need: </string>
-    <string name="my_capability">I can make this many: </string>
-    <string name="ok">Ok</string>
-    <string name="login_sign_up">New to 3DSupply? Sign up</string>
+
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_home">Home</string>
+    <string name="menu_request_detail">Request</string>
+    <string name="menu_submissions">My Submissions</string>
+    <string name="menu_requests">Requests</string>
+    <string name="menu_messages">Messages</string>
+    <string name="menu_confirmation">Confirmation</string>
+
+    <string name="start_volunteer">Volunteer</string>
+    <string name="start_institution">Institution</string>
+    <string name="start_description">Connecting institutions in demand of protective wear with 3D local manufacturers</string>
+
+    <string name="login_sign_up">New to 3DSupply? Sign In</string>
     <string name="login_header">Login</string>
     <string name="login_email">Email</string>
     <string name="login_password">Password</string>
-    <string name="login_btn">Next</string>
+    <string name="login_btn">Login</string>
+
     <string name="signup_name">Name</string>
     <string name="signup_lastname">Last Name</string>
     <string name="signup_address">Address</string>
     <string name="signup_country">Country</string>
     <string name="signup_zip">Zip</string>
-    <string name="signup_btn">Next</string>
-    <string name="sending">Sending: </string>
-    <string name="your_info">Your info</string>
+    <string name="signup_btn">Sign In</string>
+
+    <string name="sending">Supplying with: </string>
+    <string name="your_info">Your Info</string>
     <string name="submit">Submit</string>
     <string name="error_quantity_overflown">The quantity you set can\'t be higher then the number of items requested</string>
-    <string name="nav_header_title">Android Studio</string>
-    <string name="nav_header_subtitle">android.studio@android.com</string>
-    <string name="nav_header_desc">Navigation header</string>
-    <string name="menu_gallery">Gallery</string>
-    <string name="action_settings">Settings</string>
-    <string name="menu_slideshow">Slideshow</string>
-    <string name="menu_home">Home</string>
-    <string name="my_submissions">My submissions</string>
     <string name="requested_formatter">Requested: %1$d</string>
     <string name="pending_completed_formatter">Pending/Completed: %1$d</string>
     <string name="needs_formatter">Needs: %1$d</string>
+    <string name="need">Need: </string>
+    <string name="my_capability">Supply with: </string>
+    <string name="help">Help</string>
+    <string name="confirm">Confirm</string>
+    <string name="messages_no_results">You currently have no messages</string>
+    <string name="volunteer_home_search_hint">Enter your location</string>
 </resources>

@@ -8,6 +8,7 @@
     <fragment
         android:id="@+id/volunteer_home_fragment"
         android:name="com.threed.printmatcher.fragment.volunteer.request.list.VolunteerHomeFragment"
+        android:label="@string/menu_home"
         tools:layout="@layout/fragment_volunteer_home">
         <action
             android:id="@+id/home_to_request"
@@ -21,6 +22,7 @@
     <fragment
         android:id="@+id/request_detail_fragment"
         android:name="com.threed.printmatcher.fragment.volunteer.request.details.RequestDetailsFragment"
+        android:label="@string/menu_request_detail"
         tools:layout="@layout/fragment_request_details">
 
         <action
@@ -40,6 +42,7 @@
     <fragment
         android:id="@+id/request_confirmation_fragment"
         android:name="com.threed.printmatcher.fragment.volunteer.request.confirmation.RequestConfirmationFragment"
+        android:label="@string/menu_confirmation"
         tools:layout="@layout/fragment_request_confirmation">
 
         <action
@@ -58,11 +61,16 @@
     <fragment
         android:id="@+id/volunteer_submissions_fragment"
         android:name="com.threed.printmatcher.fragment.volunteer.submissions.VolunteerSubmissionsFragment"
+        android:label="@string/menu_submissions"
         tools:layout="@layout/fragment_volunteer_submissions">
 
-        <argument
-            android:name="submission"
-            app:argType="com.threed.printmatcher.model.Submission" />
     </fragment>
+
+
+    <fragment
+        android:id="@+id/volunteer_messages_fragment"
+        android:name="com.threed.printmatcher.fragment.messages.MessagesFragment"
+        android:label="@string/menu_messages"
+        tools:layout="@layout/fragment_messages" />
 
 </navigation>

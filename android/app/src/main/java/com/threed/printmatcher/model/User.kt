@@ -5,6 +5,17 @@ enum class UserType {
 }
 
 sealed class User {
-    data class Institution(val name: String, val address: String) : User()
-    data class Volunteer(val firstName: String, val lastName: String, val contact: String, val address: String) : User()
+    data class Institution(
+        val id: String,
+        val name: String,
+        val email: String,
+        val address: String
+    ) : User()
+
+    data class Volunteer(
+        val name: String,
+        val description: String,
+        val email: String,
+        val address: String
+    ) : User()
 }

@@ -1,11 +1,11 @@
 package com.threed.printmatcher.fragment.volunteer.request.list.mvp
 
 import android.view.View
-import android.widget.EditText
 import android.widget.TextView
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.textfield.TextInputEditText
 import com.threed.printmatcher.fragment.di.FragmentScope
 import com.threed.printmatcher.fragment.volunteer.request.list.VolunteerHomeFragmentDirections
 import com.threed.printmatcher.fragment.volunteer.request.list.VolunteerHomeSearchBoxTextWatcher
@@ -26,20 +26,20 @@ class VolunteerHomeView @Inject constructor(
     private lateinit var recyclerView: RecyclerView
     private lateinit var currentLocationRow: View
     private lateinit var searchResultsHolder: View
-    private lateinit var searchBox: EditText
-    private lateinit var mockAutosuggestResult1Tv: TextView
-    private lateinit var mockAutosuggestResult2Tv: TextView
-    private lateinit var mockAutosuggestResult3Tv: TextView
+    private lateinit var searchBox: TextInputEditText
+    private lateinit var mockResult1: TextView
+    private lateinit var mockResult2: TextView
+    private lateinit var mockResult3: TextView
     private lateinit var pageView: View
 
     override fun bind(pageView: View) {
         recyclerView = pageView.recycler_view
         currentLocationRow = pageView.current_location_row
         searchResultsHolder = pageView.search_results_holder
-        searchBox = pageView.search_box
-        mockAutosuggestResult1Tv = pageView.mock_result_1_tv
-        mockAutosuggestResult2Tv = pageView.mock_result_2_tv
-        mockAutosuggestResult3Tv = pageView.mock_result_3_tv
+        searchBox = pageView.search_input
+        mockResult1 = pageView.mock_result_1_tv
+        mockResult2 = pageView.mock_result_2_tv
+        mockResult3 = pageView.mock_result_3_tv
         initSearchBox()
         initMockedAutosuggestRows()
         initRecyclerView()
@@ -99,9 +99,9 @@ class VolunteerHomeView @Inject constructor(
     }
 
     private fun initMockedAutosuggestRows() {
-        currentLocationRow.setOnClickListener { presenter.onAutosuggestItemSelected("Your current location") }
-        mockAutosuggestResult1Tv.setOnClickListener { presenter.onAutosuggestItemSelected("Result 1") }
-        mockAutosuggestResult2Tv.setOnClickListener { presenter.onAutosuggestItemSelected("Result 2") }
-        mockAutosuggestResult3Tv.setOnClickListener { presenter.onAutosuggestItemSelected("Result 3") }
+        currentLocationRow.setOnClickListener { presenter.onAutosuggestItemSelected("Staple Inn, London") }
+        mockResult1.setOnClickListener { presenter.onAutosuggestItemSelected(mockResult1.text.toString()) }
+        mockResult2.setOnClickListener { presenter.onAutosuggestItemSelected(mockResult2.text.toString()) }
+        mockResult3.setOnClickListener { presenter.onAutosuggestItemSelected(mockResult3.text.toString()) }
     }
 }

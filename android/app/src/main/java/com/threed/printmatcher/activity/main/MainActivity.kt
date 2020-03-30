@@ -1,7 +1,6 @@
 package com.threed.printmatcher.activity.main
 
 import android.os.Bundle
-import android.view.Menu
 import androidx.activity.viewModels
 import androidx.appcompat.widget.Toolbar
 import androidx.databinding.DataBindingUtil.setContentView
@@ -15,7 +14,11 @@ import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.navigation.NavigationView
 import com.threed.printmatcher.R
 import com.threed.printmatcher.databinding.ActivityMainBinding
+import com.threed.printmatcher.model.User
+import com.threed.printmatcher.model.User.Institution
+import com.threed.printmatcher.model.User.Volunteer
 import dagger.android.support.DaggerAppCompatActivity
+import kotlinx.android.synthetic.main.drawer_header.view.*
 
 class MainActivity : DaggerAppCompatActivity() {
 
@@ -28,34 +31,48 @@ class MainActivity : DaggerAppCompatActivity() {
         val view = binding.root
 
         with(viewModel) {
-            getUser().observe((this@MainActivity), Observer {
+            getUser().observe((this@MainActivity), Observer { user: User ->
                 val toolbar: Toolbar = findViewById(R.id.toolbar)
                 setSupportActionBar(toolbar)
 
-                val drawerLayout: DrawerLayout = view.findViewById(R.id.drawer_layout)
-                val navView: NavigationView = view.findViewById(R.id.nav_view)
-                val navController = findNavController(R.id.home_nav_host_fragment)
-                // Passing each menu ID as a set of Ids because each
-                // menu should be considered as top level destinations.
-                appBarConfiguration = AppBarConfiguration(
-                    setOf(R.id.volunteer_home_fragment),
-                    drawerLayout
-                )
+                val drawerLayout = view.findViewById<DrawerLayout>(R.id.drawer_layout)
+                val navView = view.findViewById<NavigationView>(R.id.nav_view)
+                val headerView = navView.getHeaderView(0)
+                val navController = findNavController(R.id.main_nav_host)
+
+                when (user) {
+                    is Institution -> {
+                        headerView.name.text = user.name
+                        headerView.description.text = user.address
+                        appBarConfiguration = AppBarConfiguration(
+                            setOf(
+                                R.id.institution_requests_fragment
+                            ),
+                            drawerLayout
+                        )
+                    }
+                    is Volunteer -> {
+                        headerView.name.text = user.name
+                        headerView.description.text = user.description
+                        appBarConfiguration = AppBarConfiguration(
+                            setOf(
+                                R.id.volunteer_home_fragment,
+                                R.id.volunteer_submissions_fragment,
+                                R.id.volunteer_messages_fragment
+                            ),
+                            drawerLayout
+                        )
+                    }
+                }
+
                 setupActionBarWithNavController(navController, appBarConfiguration)
                 navView.setupWithNavController(navController)
-
             })
         }
     }
 
-    override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        menuInflater.inflate(R.menu.main, menu)
-        return true
-    }
-
     override fun onSupportNavigateUp(): Boolean {
-        val navController = findNavController(R.id.home_nav_host_fragment)
+        val navController = findNavController(R.id.main_nav_host)
         return navController.navigateUp(appBarConfiguration)
     }
 }

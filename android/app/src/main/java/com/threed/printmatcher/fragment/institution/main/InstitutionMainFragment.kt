@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
 import com.threed.printmatcher.R
 import com.threed.printmatcher.activity.main.AppViewModel
-import com.threed.printmatcher.model.User.Volunteer
+import com.threed.printmatcher.model.User.Institution
 import dagger.android.support.DaggerFragment
 
 class InstitutionMainFragment : DaggerFragment() {
@@ -24,7 +24,14 @@ class InstitutionMainFragment : DaggerFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        appViewModel.setUser(Volunteer("Mariana", "Ardoino", "", ""))
+        appViewModel.setUser(
+            Institution(
+                "New York Hospital",
+                "#425678",
+                "nychospital@gmail.com",
+                "46 St"
+            )
+        )
     }
 }
 
