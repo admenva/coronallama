@@ -19,17 +19,17 @@ class InstitutionMainFragment : DaggerFragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_volunteer_main, container, false)
+        return inflater.inflate(R.layout.fragment_institution_main, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         appViewModel.setUser(
             Institution(
-                "New York Hospital",
+                "St Thomas' Hospital",
                 "#425678",
-                "nychospital@gmail.com",
-                "46 St"
+                "stlondonhospital@gmail.com",
+                "Westminster Bridge Rd, London"
             )
         )
     }

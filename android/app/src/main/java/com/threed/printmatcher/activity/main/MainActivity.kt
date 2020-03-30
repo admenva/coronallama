@@ -43,10 +43,12 @@ class MainActivity : DaggerAppCompatActivity() {
                 when (user) {
                     is Institution -> {
                         headerView.name.text = user.name
-                        headerView.description.text = user.address
+                        headerView.description.text = user.id
+                        headerView.profile_img.setImageResource(R.drawable.ic_hospital)
                         appBarConfiguration = AppBarConfiguration(
                             setOf(
-                                R.id.institution_requests_fragment
+                                R.id.institution_requests_fragment,
+                                R.id.volunteer_messages_fragment
                             ),
                             drawerLayout
                         )
@@ -54,6 +56,7 @@ class MainActivity : DaggerAppCompatActivity() {
                     is Volunteer -> {
                         headerView.name.text = user.name
                         headerView.description.text = user.description
+                        headerView.profile_img.setImageResource(R.drawable.ic_3d_printer)
                         appBarConfiguration = AppBarConfiguration(
                             setOf(
                                 R.id.volunteer_home_fragment,

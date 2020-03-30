@@ -7,12 +7,15 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
 import androidx.core.view.ViewCompat.requireViewById
-import androidx.navigation.findNavController
+import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.navArgs
 import com.threed.printmatcher.R
 import com.threed.printmatcher.model.UserType
 import dagger.android.support.DaggerFragment
 
 class LoginFragment : DaggerFragment() {
+
+    private val args: LoginFragmentArgs by navArgs()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -22,18 +25,21 @@ class LoginFragment : DaggerFragment() {
         val view = inflater.inflate(R.layout.fragment_login, container, false)
 
         requireViewById<TextView>(view, R.id.signup_btn)
-            .setOnClickListener { navigateToSignUp(view) }
+            .setOnClickListener { navigateToSignUp() }
         requireViewById<Button>(view, R.id.login_btn)
-            .setOnClickListener { navigateToVolunteerHome(view) }
+            .setOnClickListener { navigateToHome() }
 
         return view
     }
 
-    private fun navigateToSignUp(view: View) {
-        view.findNavController().navigate(LoginFragmentDirections.loginToSignup(UserType.VOLUNTEER))
+    private fun navigateToSignUp() {
+        findNavController().navigate(LoginFragmentDirections.loginToSignup(UserType.VOLUNTEER))
     }
 
-    private fun navigateToVolunteerHome(view: View) {
-        view.findNavController().navigate(LoginFragmentDirections.loginToVolunteer())
+    private fun navigateToHome() {
+        when (args.userType) {
+            UserType.VOLUNTEER -> findNavController().navigate(LoginFragmentDirections.loginToVolunteer())
+            UserType.INSTITUTION -> findNavController().navigate(LoginFragmentDirections.loginToInstitution())
+        }
     }
 }

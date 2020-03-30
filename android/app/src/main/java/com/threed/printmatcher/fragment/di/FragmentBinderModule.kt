@@ -1,5 +1,7 @@
 package com.threed.printmatcher.fragment.di
 
+import com.threed.printmatcher.fragment.institution.main.InstitutionMainFragment
+import com.threed.printmatcher.fragment.institution.main.di.InstitutionMainModule
 import com.threed.printmatcher.fragment.institution.requests.InstitutionRequestsFragment
 import com.threed.printmatcher.fragment.institution.requests.di.InstitutionRequestsModule
 import com.threed.printmatcher.fragment.login.LoginFragment
@@ -61,6 +63,10 @@ abstract class FragmentBinderModule {
     @ContributesAndroidInjector(modules = [InstitutionRequestsModule::class])
     @FragmentScope
     abstract fun provideInstitutionRequestsFragment(): InstitutionRequestsFragment
+
+    @ContributesAndroidInjector(modules = [InstitutionMainModule::class])
+    @FragmentScope
+    abstract fun provideInstitutionMainFragment(): InstitutionMainFragment
 
     @ContributesAndroidInjector(modules = [MessagesFragmentModule::class])
     @FragmentScope

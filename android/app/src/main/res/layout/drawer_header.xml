@@ -14,7 +14,7 @@
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:layout_marginBottom="@dimen/_16"
-        android:background="@drawable/ic_3d_printer" />
+        tools:background="@drawable/ic_3d_printer"/>
 
     <TextView
         android:id="@+id/name"
