@@ -7,13 +7,13 @@
 
     <fragment
         android:id="@+id/institution_requests_fragment"
-        android:name="com.threed.printmatcher.features.institution.requests.InstitutionRequestsFragment"
+        android:name="com.threed.supply.features.institution.requests.InstitutionRequestsFragment"
         android:label="@string/menu_requests"
         tools:layout="@layout/fragment_institution_requests">
 
         <argument
             android:name="request"
-            app:argType="com.threed.printmatcher.model.Request" />
+            app:argType="com.threed.supply.libs.model.Request" />
         <action
             android:id="@+id/requests_to_create_request"
             app:destination="@id/institution_new_request_fragment"
@@ -28,7 +28,7 @@
 
     <fragment
         android:id="@+id/institution_new_request_fragment"
-        android:name="com.threed.printmatcher.features.institution.create.NewRequestFragment"
+        android:name="com.threed.supply.features.institution.create.NewRequestFragment"
         android:label="@string/menu_new_request"
         tools:layout="@layout/fragment_new_request">
         <action
@@ -43,7 +43,7 @@
 
     <fragment
         android:id="@+id/institution_messages_fragment"
-        android:name="com.threed.printmatcher.features.messages.MessagesFragment"
+        android:name="com.threed.supply.features.messages.MessagesFragment"
         android:label="@string/menu_messages"
         tools:layout="@layout/fragment_messages" />
 

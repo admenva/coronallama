@@ -8,7 +8,7 @@ android {
     compileSdkVersion 29
 
     defaultConfig {
-        applicationId "com.threed.printmatcher"
+        applicationId "com.threed.supply"
         minSdkVersion 21
         targetSdkVersion 29
         versionCode 1
