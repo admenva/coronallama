@@ -6,7 +6,7 @@
 
     <fragment
         android:id="@+id/start_fragment"
-        android:name="com.threed.printmatcher.features.start.StartFragment"
+        android:name="com.threed.supply.features.start.StartFragment"
         tools:layout="@layout/fragment_start">
         <action
             android:id="@+id/start_to_login"
@@ -19,12 +19,12 @@
 
     <fragment
         android:id="@+id/login_fragment"
-        android:name="com.threed.printmatcher.features.login.LoginFragment"
+        android:name="com.threed.supply.features.login.LoginFragment"
         tools:layout="@layout/fragment_login">
 
         <argument
             android:name="userType"
-            app:argType="com.threed.printmatcher.model.UserType" />
+            app:argType="com.threed.supply.libs.model.UserType" />
 
         <action
             android:id="@+id/login_to_signup"
@@ -54,12 +54,12 @@
 
     <fragment
         android:id="@+id/signup_fragment"
-        android:name="com.threed.printmatcher.features.signup.SignUpFragment"
+        android:name="com.threed.supply.features.signup.SignUpFragment"
         tools:layout="@layout/fragment_signup">
 
         <argument
             android:name="userId"
-            app:argType="com.threed.printmatcher.model.UserType" />
+            app:argType="com.threed.supply.libs.model.UserType" />
 
         <action
             android:id="@+id/signup_to_volunteer"
@@ -81,12 +81,12 @@
 
     <fragment
         android:id="@+id/volunteer_main_fragment"
-        android:name="com.threed.printmatcher.features.volunteer.main.VolunteerMainFragment"
+        android:name="com.threed.supply.features.volunteer.main.VolunteerMainFragment"
         tools:layout="@layout/fragment_volunteer_main" />
 
     <fragment
         android:id="@+id/institution_main_fragment"
-        android:name="com.threed.printmatcher.features.institution.main.InstitutionMainFragment"
+        android:name="com.threed.supply.features.institution.main.InstitutionMainFragment"
         tools:layout="@layout/fragment_institution_main" />
 
 </navigation>
