@@ -6,7 +6,7 @@
 
     <fragment
         android:id="@+id/start_fragment"
-        android:name="com.threed.printmatcher.fragment.start.StartFragment"
+        android:name="com.threed.printmatcher.features.start.StartFragment"
         tools:layout="@layout/fragment_start">
         <action
             android:id="@+id/start_to_login"
@@ -19,7 +19,7 @@
 
     <fragment
         android:id="@+id/login_fragment"
-        android:name="com.threed.printmatcher.fragment.login.LoginFragment"
+        android:name="com.threed.printmatcher.features.login.LoginFragment"
         tools:layout="@layout/fragment_login">
 
         <argument
@@ -54,7 +54,7 @@
 
     <fragment
         android:id="@+id/signup_fragment"
-        android:name="com.threed.printmatcher.fragment.signup.SignUpFragment"
+        android:name="com.threed.printmatcher.features.signup.SignUpFragment"
         tools:layout="@layout/fragment_signup">
 
         <argument
@@ -81,12 +81,12 @@
 
     <fragment
         android:id="@+id/volunteer_main_fragment"
-        android:name="com.threed.printmatcher.fragment.volunteer.main.VolunteerMainFragment"
+        android:name="com.threed.printmatcher.features.volunteer.main.VolunteerMainFragment"
         tools:layout="@layout/fragment_volunteer_main" />
 
     <fragment
         android:id="@+id/institution_main_fragment"
-        android:name="com.threed.printmatcher.fragment.institution.main.InstitutionMainFragment"
+        android:name="com.threed.printmatcher.features.institution.main.InstitutionMainFragment"
         tools:layout="@layout/fragment_institution_main" />
 
 </navigation>

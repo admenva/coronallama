@@ -5,7 +5,7 @@ import android.content.res.Resources
 import android.util.Log
 import com.jakewharton.picasso.OkHttp3Downloader
 import com.squareup.picasso.Picasso
-import com.threed.printmatcher.app.PrintMatcherApplication
+import com.threed.printmatcher.app.Application
 import dagger.Binds
 import dagger.Module
 import dagger.Provides
@@ -19,7 +19,7 @@ import java.util.concurrent.TimeUnit
 abstract class AppModule {
 
     @Binds
-    internal abstract fun context(application: PrintMatcherApplication): Context
+    internal abstract fun context(application: Application): Context
 
     @Module
     companion object {
@@ -27,7 +27,7 @@ abstract class AppModule {
         @Provides
         @JvmStatic
         @ApplicationScope
-        internal fun resources(application: PrintMatcherApplication): Resources {
+        internal fun resources(application: Application): Resources {
             return application.resources
         }
 

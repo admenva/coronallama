@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/institution_requests_fragment"
-        android:name="com.threed.printmatcher.fragment.institution.requests.InstitutionRequestsFragment"
+        android:name="com.threed.printmatcher.features.institution.requests.InstitutionRequestsFragment"
         android:label="@string/menu_requests"
         tools:layout="@layout/fragment_institution_requests">
 
@@ -28,7 +28,7 @@
 
     <fragment
         android:id="@+id/institution_new_request_fragment"
-        android:name="com.threed.printmatcher.fragment.institution.create.NewRequestFragment"
+        android:name="com.threed.printmatcher.features.institution.create.NewRequestFragment"
         android:label="@string/menu_new_request"
         tools:layout="@layout/fragment_new_request">
         <action
@@ -43,7 +43,7 @@
 
     <fragment
         android:id="@+id/institution_messages_fragment"
-        android:name="com.threed.printmatcher.fragment.messages.MessagesFragment"
+        android:name="com.threed.printmatcher.features.messages.MessagesFragment"
         android:label="@string/menu_messages"
         tools:layout="@layout/fragment_messages" />
 
